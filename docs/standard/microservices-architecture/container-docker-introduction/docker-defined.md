@@ -16,7 +16,7 @@ ms.lasthandoff: 10/18/2017
 ---
 # <a name="what-is-docker"></a>Qu’est Docker ?
 
-[Docker](https://www.docker.com/) est un [projet open source](https://github.com/docker/docker) pour automatiser le déploiement d’applications en tant que conteneurs portables et autonomes qui peut s’exécuter sur le cloud ou localement. Docker est également un [société](https://www.docker.com/) qui promeut et évolue cette technologie. Docker fonctionne en collaboration avec le cloud, Linux et les fournisseurs de Windows, notamment Microsoft.
+[Docker](https://www.docker.com/) est un [projet open source](https://github.com/docker/docker) pour automatiser le déploiement d’applications en tant que conteneurs portables et autonomes qui peuvent s’exécuter sur le cloud ou localement. Docker est également une [société](https://www.docker.com/) qui promeut et fait évoluer cette technologie. Docker fonctionne en collaboration avec le cloud, Linux et les fournisseurs de Windows, notamment Microsoft.
 
 ![](./media/image2.png)
 
