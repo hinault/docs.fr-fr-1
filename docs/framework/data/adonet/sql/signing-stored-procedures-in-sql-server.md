@@ -1,50 +1,63 @@
 ---
 title: "Signature de procédures stockées dans SQL Server"
 ms.custom: 
-ms.date: 03/30/2017
+ms.date: 01/05/2018
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-ado
+ms.technology:
+- dotnet-ado
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: douglaslMS
 ms.author: douglasl
 manager: craigg
-ms.workload: dotnet
-ms.openlocfilehash: a3f1ed66ed7caf2272ca27097dc9a838bec7d0ae
-ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
+ms.workload:
+- dotnet
+ms.openlocfilehash: 15771cc214ee17bc2c98bab2423013483d1355f1
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/17/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>Signature de procédures stockées dans SQL Server
-Vous pouvez signer une procédure stockée avec un certificat ou une clé asymétrique. Cela est très utile lorsque des autorisations ne peuvent pas être héritées par le biais du chaînage des propriétés ou lorsque ce dernier est rompu, comme avec SQL dynamique. Vous devez alors créer un utilisateur mappé au certificat en accordant à l'utilisateur du certificat des autorisations sur les objets auxquels la procédure stockée doit accéder.  
+ Une signature numérique est un condensat des données qui est chiffré avec la clé privée du signataire. La clé privée garantit que la signature numérique est unique à son porteur ou propriétaire. Vous pouvez signer les assemblys, les fonctions (à l’exception des fonctions table inline), les déclencheurs et les procédures stockées.  
   
- Lorsque la procédure stockée est exécutée, SQL Server combine les autorisations de l'utilisateur du certificat à celles de l'appelant. À la différence de la clause EXECUTE AS, il ne modifie pas le contexte d'exécution de la procédure. Les fonctions intégrées qui retournent les noms d'accès et d'utilisateur retournent le non de l'appelant, et non celui de l'utilisateur du certificat.  
+ Vous pouvez signer une procédure stockée avec un certificat ou une clé asymétrique. Cela est très utile lorsque des autorisations ne peuvent pas être héritées par le biais du chaînage des propriétés ou lorsque ce dernier est rompu, comme avec SQL dynamique. Vous pouvez ensuite créer un utilisateur mappé au certificat, octroi d’autorisations utilisateur sur les objets de que la procédure stockée doit accéder au certificat.  
+
+ Vous pouvez également créer une connexion mappée sur le même certificat, puis accorder des autorisations au niveau du serveur nécessaires pour que la connexion ou ajouter la connexion à une ou plusieurs des rôles serveur fixes. Il est conçu pour éviter d’activer la `TRUSTWORTHY` de base de données de paramètre pour les scénarios dans lesquels des autorisations de niveau supérieur sont nécessaires.  
   
- Une signature numérique est un résumé des données qui est chiffré avec la clé privée du signataire. La clé privée garantit que la signature numérique est unique à son porteur ou propriétaire. Vous pouvez signer des procédures stockées, des fonctions ou des déclencheurs.  
-  
-> [!NOTE]
->  Vous pouvez créer un certificat dans la base de données MASTER afin d'accorder des autorisations de niveau serveur.  
+ Lorsque la procédure stockée est exécutée, SQL Server combine les autorisations de l’utilisateur du certificat et/ou de la connexion avec celles de l’appelant. Contrairement à la `EXECUTE AS` clause, il ne modifie pas le contexte d’exécution de la procédure. Les fonctions intégrées qui retournent les noms d'accès et d'utilisateur retournent le non de l'appelant, et non celui de l'utilisateur du certificat.  
   
 ## <a name="creating-certificates"></a>Création de certificats  
- Lorsque vous signez une procédure stockée avec un certificat, un résumé des données contenant le hachage chiffré du code de la procédure stockée est créé à l'aide de la clé privée. Au moment de l'exécution, le résumé des données est chiffré avec la clé publique et comparée à la valeur de hachage de la procédure stockée. Toute modification de la procédure stockée invalide la valeur de hachage afin que la signature numérique ne corresponde plus. Cela permet d'éviter qu'une personne n'ayant pas accès à la clé privée puisse modifier le code de la procédure stockée. Par conséquent, vous devez signer de nouveau la procédure à chaque fois que vous la modifiez.  
+ Lorsque vous signez une procédure stockée avec un certificat ou une clé asymétrique, un résumé des données contenant le hachage chiffré du code de procédure stockée, ainsi que l’exécution-en tant qu’utilisateur, est créé à l’aide de la clé privée. Au moment de l’exécution, le condensat des données est chiffré avec la clé publique et comparée à la valeur de hachage de la procédure stockée. Modification de l’exécution-comme utilisateur invalide la valeur de hachage afin que la signature numérique ne correspond plus à. Modification de la procédure stockée supprime la signature, ce qui empêche une personne qui n’a pas accès à la clé privée à partir de la modification du code de procédure stockée. Dans les deux cas, vous devez signer à nouveau la procédure chaque fois que vous modifiez le code ou l’exécuter-en tant qu’utilisateur.  
   
- La signature d'un module est réalisée en quatre étapes :  
+ Il existe deux étapes impliquées dans la signature d’un module :  
   
-1.  Créez un certificat à l'aide de l'instruction Transact-SQL `CREATE CERTIFICATE [certificateName]`. Cette instruction possède plusieurs options permettant de définir une date de début et de fin, de même qu'un mot de passe. La date d'expiration par défaut est une année.  
-  
-2.  Créez un utilisateur de base de données associé à ce certificat à l'aide de l'instruction Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]`. Cet utilisateur existe uniquement dans la base de données et n'est pas associé une connexion.  
-  
-3.  Accordez les autorisations requises sur les objets de la base de données à l'utilisateur du certificat.  
-  
-> [!NOTE]
->  Un certificat ne permet pas d'accorder des autorisations à un utilisateur dont les autorisations ont été révoquées à l'aide de l'instruction DENY. L'instruction DENY a toujours priorité sur l'instruction GRANT, ce qui empêche l'appelant d'hériter des autorisations accordées à l'utilisateur du certificat.  
+1.  Créez un certificat à l'aide de l'instruction Transact-SQL `CREATE CERTIFICATE [certificateName]`. Cette instruction possède plusieurs options permettant de définir une date de début et de fin, de même qu'un mot de passe. La date d’expiration par défaut est une année.  
   
 1.  Signez la procédure avec le certificat en utilisant l'instruction Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]`.  
+
+Une fois que le module a été signé, un ou plusieurs principaux doit être créée pour contenir les autorisations supplémentaires qui doivent être associées au certificat.  
+
+Si le module a besoin des autorisations au niveau de la base de données supplémentaires :  
+  
+1.  Créez un utilisateur de base de données associé à ce certificat à l'aide de l'instruction Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]`. Cet utilisateur existe dans la base de données et n’est pas associé à un compte de connexion, sauf si une connexion a également été créée à partir du même certificat.  
+  
+1.  Autorisez l’utilisateur du certificat requis au niveau de la base de données.  
+  
+Si le module a besoin des autorisations supplémentaires au niveau du serveur :  
+  
+1.  Copiez le certificat à le `master` base de données.  
+ 
+1.  Créer une connexion associée à ce certificat à l’aide de Transact-SQL `CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]` instruction.  
+  
+1.  Accorder des autorisations requises au niveau du serveur le nom du certificat.  
+  
+> [!NOTE]  
+>  Un certificat ne permet pas d'accorder des autorisations à un utilisateur dont les autorisations ont été révoquées à l'aide de l'instruction DENY. L'instruction DENY a toujours priorité sur l'instruction GRANT, ce qui empêche l'appelant d'hériter des autorisations accordées à l'utilisateur du certificat.  
   
 ## <a name="external-resources"></a>Ressources externes  
  Pour plus d'informations, voir les ressources ci-dessous.  

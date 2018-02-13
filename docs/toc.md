@@ -25,7 +25,9 @@
 ### [Présentation des bibliothèques de classes .NET](standard/class-library-overview.md)
 ### [Types de base](standard/base-types/)
 ## [Bibliothèques de classes .NET](standard/class-libraries.md)
-## [Analyseur de portabilité](standard/portability-analyzer.md)
+## Analyseurs
+### [Analyseur d’API](standard/analyzers/api-analyzer.md) 
+### [Analyseur de portabilité](standard/analyzers/portability-analyzer.md)
 ## [Gestion et levée des exceptions](standard/exceptions/)
 ## [Format de fichier d’assembly .NET](standard/assembly-format.md)
 ## [Nettoyage de la mémoire](standard/garbage-collection/)
@@ -151,6 +153,9 @@
 ##### [dotnet add package](core/tools/dotnet-add-package.md)
 ##### [dotnet remove package](core/tools/dotnet-remove-package.md)
 ### [global.json](core/tools/global-json.md)
+## [Outils .NET Core supplémentaires](core/additional-tools/index.md)
+### [WCF Web Service Reference Provider](core/additional-tools/wcf-web-service-reference-guide.md)
+### [Générateur de sérialiseur XML](core/additional-tools/xml-serializer-generator.md)
 ## [Portage à partir de .NET Framework](core/porting/index.md)
 ### [Organisation de projets pour .NET Core](core/porting/project-structure.md)
 ### [Analyse de dépendances tierces](core/porting/third-party-deps.md)
@@ -258,6 +263,8 @@
 ### [Documentation de votre code](csharp/codedoc.md)
 ### [Gestion des versions](csharp/versioning.md)
 ## [Rubriques de guide pratique C#](csharp/how-to/index.md)
+### [Guide pratique pour analyser des chaînes à l’aide de `String.Split`](csharp/how-to/parse-strings-using-split.md)
+### [Guide pratique pour concaténer des chaînes](csharp/how-to/concatenate-multiple-strings.md)
 <!-- End of C# Concepts section -->
 ## [Kit SDK .NET Compiler Platform (API Roslyn)](csharp/roslyn-sdk/)
 ## [Guide de programmation C#](csharp/programming-guide/)
@@ -277,7 +284,6 @@
 <!--## [Tutorials](fsharp/tutorials/index.md)-->
 ## Didacticiels
 ### [F# Interactive](fsharp/tutorials/fsharp-interactive/index.md)
-#### [Options F# Interactive](fsharp/tutorials/fsharp-interactive/fsharp-interactive-options.md)
 ### [Fournisseurs de type](fsharp/tutorials/type-providers/index.md)
 #### [Accès à une base de données SQL Database à l’aide de fournisseurs de type](fsharp/tutorials/type-providers/accessing-a-sql-database.md)
 #### [Accès à une base de données SQL Database à l’aide de fournisseurs de type et d’entités](fsharp/tutorials/type-providers/accessing-a-sql-database-entities.md)
@@ -403,6 +409,7 @@
 ### [Corrigé mot clé](fsharp/language-reference/fixed.md)
 ### [Directives de compilateur](fsharp/language-reference/compiler-directives.md)
 ### [Options du compilateur](fsharp/language-reference/compiler-options.md)
+### [Options F# Interactive](fsharp/language-reference/fsharp-interactive-options.md)
 ### [Identificateurs de ligne, de fichier et de chemin source](fsharp/language-reference/source-line-file-path-identifiers.md)
 ### [Informations relatives à l’appelant](fsharp/language-reference/caller-information.md)
 ### [Syntaxe détaillée](fsharp/language-reference/verbose-syntax.md)

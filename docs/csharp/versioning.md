@@ -10,11 +10,11 @@ ms.prod: visual-studio-dev-14
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: aa8732d7-5cd0-46e1-994a-78017f20d861
-ms.openlocfilehash: 0b671333019c00abafcfb72533e30936f8fc6ad7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 153e7d115b34e6659f6a8ca23014441b86847796
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="versioning-in-c"></a>Gestion de version en C# #
 
@@ -57,7 +57,7 @@ Plus il est facile pour vos utilisateurs d’effectuer la mise à niveau vers la
 
 ### <a name="application-configuration-file"></a>Fichier de configuration de l'application
 
-En tant que développeur .NET, il est très probable que vous ayez rencontré [le fichier `app.config`](https://msdn.microsoft.com/en-us/library/1fk1t1t0(v=vs.110).aspx), présent dans la plupart des types de projets.
+En tant que développeur .NET, il est très probable que vous ayez rencontré [le fichier `app.config`](https://msdn.microsoft.com/library/1fk1t1t0(v=vs.110).aspx), présent dans la plupart des types de projets.
 Ce simple fichier de configuration peut s’avérer très utile pour améliorer le déploiement de nouvelles mises à jour. Vous devez généralement concevoir vos bibliothèques de sorte que les informations qui sont susceptibles de changer régulièrement soient stockées dans le fichier `app.config` ; ainsi, quand ces informations sont mises à jour, le fichier de configuration des anciennes versions doit uniquement être remplacé par le nouveau sans que la recompilation de la bibliothèque ne soit nécessaire.
 
 ## <a name="consuming-libraries"></a>Utilisation des bibliothèques
@@ -68,7 +68,7 @@ Heureusement pour vous, C# et l’écosystème .NET sont fournis avec des foncti
 
 ### <a name="assembly-binding-redirection"></a>Redirection des liaisons d'assembly
 
-Vous pouvez utiliser le fichier `app.config` pour mettre à jour la version d’une bibliothèque que votre application emploie. En ajoutant un élément nommé [*redirection de liaison*](https://msdn.microsoft.com/en-us/library/7wd6ex19(v=vs.110).aspx), vous pouvez utiliser la nouvelle version de bibliothèque sans avoir à recompiler votre application. L’exemple suivant montre comment vous devez mettre à jour le fichier `app.config` de votre application pour utiliser la version corrective `1.0.1` de `ReferencedLibrary` au lieu de la version `1.0.0` avec laquelle il a été compilé à l’origine.
+Vous pouvez utiliser le fichier `app.config` pour mettre à jour la version d’une bibliothèque que votre application emploie. En ajoutant un élément nommé [*redirection de liaison*](https://msdn.microsoft.com/library/7wd6ex19(v=vs.110).aspx), vous pouvez utiliser la nouvelle version de bibliothèque sans avoir à recompiler votre application. L’exemple suivant montre comment vous devez mettre à jour le fichier `app.config` de votre application pour utiliser la version corrective `1.0.1` de `ReferencedLibrary` au lieu de la version `1.0.0` avec laquelle il a été compilé à l’origine.
 
 ```xml
 <dependentAssembly>

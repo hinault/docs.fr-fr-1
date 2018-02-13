@@ -19,11 +19,11 @@ ms.assetid: 839c960c-c2dc-4d05-af4d-ca5428e54008
 caps.latest.revision: "43"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e6fceb569a79b5988171f06ae6c09d86b5fc667d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: e4c57efa4027af5dd6b0476eb65845a39fc0b691
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="named-and-optional-arguments-c-programming-guide"></a>Arguments nommés et facultatifs (Guide de programmation C#)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] introduit des arguments nommés et facultatifs. Les *arguments nommés* vous permettent de spécifier un argument pour un paramètre particulier en associant l’argument avec le nom du paramètre plutôt qu’avec la position du paramètre dans la liste de paramètres. Les *arguments facultatifs* vous permettent d’omettre des arguments pour certains paramètres. Les deux techniques peuvent être utilisées avec les méthodes, les indexeurs, les constructeurs et les délégués.  
@@ -33,29 +33,29 @@ ms.lasthandoff: 11/21/2017
  La combinaison de paramètres nommés et facultatifs vous permet de fournir des arguments uniquement pour certains paramètres d’une liste de paramètres facultatifs. Cette fonctionnalité facilite considérablement les appels aux interfaces COM telles que les API Microsoft Office Automation.  
   
 ## <a name="named-arguments"></a>Arguments nommés  
- Avec les arguments nommés, vous n’avez plus à mémoriser ou à rechercher l’ordre des paramètres dans les listes de paramètres des méthodes appelées. Vous pouvez spécifier le paramètre de chaque argument par son nom. Par exemple, une fonction qui imprime les détails de la commande (par exemple, le nom du vendeur, nom de produits et le numéro de l’ordre) peut être appelée de la manière standard en envoyant des arguments par position, dans l’ordre défini par la fonction.
+ Avec les arguments nommés, vous n’avez plus à mémoriser ou à rechercher l’ordre des paramètres dans les listes de paramètres des méthodes appelées. Vous pouvez spécifier le paramètre de chaque argument par son nom. Par exemple, une fonction qui imprime les détails d’une commande (par exemple, le nom du vendeur, le nom du produit et le numéro de commande) peut être appelée de manière standard en envoyant des arguments par position, dans l’ordre défini par la fonction.
   
  `PrintOrderDetails("Gift Shop", 31, "Red Mug");`
   
- Si vous ne vous souvenez pas l’ordre des paramètres mais que vous connaissez leurs noms, vous pouvez envoyer les arguments dans n’importe quel ordre.  
+ Si vous ne vous souvenez pas de l’ordre des paramètres, mais que vous connaissez leur nom, vous pouvez envoyer les arguments dans n’importe quel ordre.  
   
  `PrintOrderDetails(orderNum: 31, productName: "Red Mug", sellerName: "Gift Shop");`
   
  `PrintOrderDetails(productName: "Red Mug", sellerName: "Gift Shop", orderNum: 31);`
   
- Les arguments nommés améliorent également la lisibilité de votre code en identifiant ce que chaque argument représente. Dans la méthode de l’exemple ci-dessous, le `sellerName` ne peut pas être null ou un espace blanc. À la fois comme `sellerName` et `productName` sont des types de chaînes, au lieu d’envoyer des arguments par position, il est judicieux d’utiliser des arguments nommés pour lever l’ambiguïté entre les deux et réduire les risques de confusion pour toute personne lisant le code.
+ Les arguments nommés améliorent également la lisibilité de votre code en identifiant ce que chaque argument représente. Dans l’exemple de méthode ci-dessous, le `sellerName` ne peut pas être null ou un espace blanc. `sellerName` et `productName` étant tous deux des types de chaînes, au lieu d’envoyer les arguments par position, il est plus logique d’utiliser des arguments nommés pour lever l’ambiguïté entre les deux et réduire les risques de confusion pour toute personne lisant le code.
   
- Arguments nommés, lorsqu’il est utilisé avec des arguments de position, sont valides tant que 
+ Les arguments nommés, quand ils sont utilisés avec des arguments de position, sont valides tant que : 
 
-- ils n’êtes pas suivis par les arguments de position, ou
+- Ils ne sont pas suivis d’arguments de position, ou
 
  `PrintOrderDetails("Gift Shop", 31, productName: "Red Mug");`
 
-- _en commençant par C# 7.2_, ils sont utilisés dans la position correcte. Dans l’exemple ci-dessous, le paramètre `orderNum` est à la position correcte, mais elle n’est pas explicitement nommée.
+- _À compter de C# 7.2_, ils sont utilisés dans la position correcte Dans l’exemple ci-dessous, le paramètre `orderNum` est à la position correcte, mais il n’est pas explicitement nommé.
 
  `PrintOrderDetails(sellerName: "Gift Shop", 31, productName: "Red Mug");`
   
- Toutefois, d’ordre des arguments nommés ne sont pas valides si elles sont suivies par les arguments de position.
+ Toutefois, les arguments nommés qui ne sont pas dans l’ordre ne sont pas valides s’ils sont suivis d’arguments de position.
 
  ```csharp
  // This generates CS1738: Named argument specifications must appear after all fixed arguments have been specified.
@@ -63,7 +63,7 @@ ms.lasthandoff: 11/21/2017
  ```
   
 ## <a name="example"></a>Exemple  
- Le code suivant implémente les exemples de cette section, ainsi que d’autres plus supplémentaires.  
+ Le code suivant implémente les exemples de cette section, ainsi que d’autres exemples.  
   
  [!code-csharp[csProgGuideNamedAndOptional#1](../../../csharp/programming-guide/classes-and-structs/codesnippet/CSharp/named-and-optional-arguments_1.cs)]  
   
@@ -106,7 +106,7 @@ Paramètres facultatifs dans ExampleMethod
 ## <a name="com-interfaces"></a>Interfaces COM  
  Avec la prise en charge des objets dynamiques et d’autres améliorations, les arguments nommés et facultatifs améliorent nettement l’interopérabilité avec les API COM, telles que les API Office Automation.  
   
- Par exemple, la méthode [AutoFormat](http://go.microsoft.com/fwlink/?LinkId=148201) dans l’interface [Range](http://go.microsoft.com/fwlink/?LinkId=148196) de Microsoft Office Excel comporte sept paramètres, qui sont tous facultatifs. Ces paramètres sont indiqués dans l’illustration suivante.  
+ Par exemple, la méthode [AutoFormat](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range.autoformat(v=office.15).aspx) dans l’interface [Range](https://msdn.microsoft.com/library/microsoft.office.interop.excel.range(v=office.15).aspx) de Microsoft Office Excel comporte sept paramètres, qui sont tous facultatifs. Ces paramètres sont indiqués dans l’illustration suivante.  
   
  ![Info express IntelliSense pour la méthode AutoFormat.](../../../csharp/programming-guide/classes-and-structs/media/autoformat_parameters.png "AutoFormat_Parameters")  
 Paramètres AutoFormat  

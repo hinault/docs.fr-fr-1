@@ -1,26 +1,26 @@
 ---
 title: "Démarrage rapide - Collections - Guide C#"
-description: "Découvrez C# en explorant la collection de listes de ce Démarrage rapide."
+description: "Découvrez C# en explorant la collection de listes de ce guide de démarrage rapide."
 keywords: C#, prise en main, didacticiel, collections, liste
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/13/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 6f559c7a3290e7db2266e10ec792c283394fb904
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 44e79432c0a1970313cba21778e2bf439f8a4388
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="c-quick-start-collections"></a>Démarrage rapide C# : Collections #
 
-Ce démarrage rapide propose une introduction au langage C# et présente les concepts de base de la classe <xref:System.Collections.Generic.List%601>.
+Ce guide de démarrage rapide propose une introduction au langage C# et présente les concepts de base de la classe <xref:System.Collections.Generic.List%601>.
 
-Ce démarrage rapide suppose que vous disposez d’un ordinateur que vous pouvez utiliser pour le développement. La rubrique .NET [Bien démarrer en 10 minutes](https://www.microsoft.com/net/core) contient des instructions pour configurer votre environnement de développement local sur Mac, PC ou Linux. Une brève vue d’ensemble des commandes que vous utiliserez est disponible dans la [présentation des démarrages rapides locaux](local-environment.md) avec des liens pour plus d’informations.
+Ce guide de démarrage rapide suppose que vous disposez d’un ordinateur que vous pouvez utiliser pour le développement. La rubrique .NET [Bien démarrer en 10 minutes](https://www.microsoft.com/net/core) contient des instructions pour configurer votre environnement de développement local sur Mac, PC ou Linux. Une brève vue d’ensemble des commandes que vous utiliserez est disponible dans la [présentation des guides de démarrage rapide locaux](local-environment.md) avec des liens pour plus d’informations.
 
 ## <a name="a-basic-list-example"></a>Exemple de liste de base.
 
@@ -53,7 +53,7 @@ namespace list_quickstart
 
 Remplacez `<name>` par votre nom. Enregistrez **Program.cs**. Tapez `dotnet run` dans votre fenêtre de console pour effectuer un essai.
 
-Vous venez de créer une liste de chaînes, d’ajouter trois noms à cette liste et d’afficher les noms tout en majuscules. Vous utilisez des concepts que vous avez appris dans des Démarrages rapides précédents pour lire la liste en boucle.
+Vous venez de créer une liste de chaînes, d’ajouter trois noms à cette liste et d’afficher les noms tout en majuscules. Vous utilisez des concepts que vous avez appris dans les guides de démarrage rapide précédents pour lire la liste en boucle.
 
 Le code permettant d’afficher les noms utilise des **chaînes interpolées**.  Quand vous faites précéder une `string` du caractère `$`, vous pouvez incorporer le code C# dans la déclaration de chaîne. La chaîne réelle remplace ce code C# par la valeur qu’elle génère. Dans cet exemple, elle remplace `{name.ToUpper()}` par chaque nom, converti en majuscules, car vous avez appelé la méthode <xref:System.String.ToUpper%2A>.
 
@@ -218,6 +218,6 @@ Vous pouvez afficher un exemple de solution en [consultant l’exemple de code t
 
 À chaque itération de la boucle, vous sélectionnez les deux derniers entiers de la liste, les additionner et ajoutez la valeur obtenue à la liste. La boucle se répète jusqu'à ce que vous ayez ajouté 20 éléments à la liste.
 
-Félicitations, vous avez terminé ce démarrage rapide sur les listes. Vous pouvez passer au démarrage rapide [Introduction aux classes](introduction-to-classes.md) dans votre propre environnement de développement.
+Félicitations, vous avez terminé ce guide de démarrage rapide sur les listes. Vous pouvez passer au démarrage rapide [Introduction aux classes](introduction-to-classes.md) dans votre propre environnement de développement.
 
 Pour plus d’informations sur l’utilisation du type `List`, consultez la rubrique du [Guide .NET](../../standard/index.md) sur les [collections](../../standard/collections/index.md). Vous allez également en découvrir plus sur de nombreux autres types de collection.

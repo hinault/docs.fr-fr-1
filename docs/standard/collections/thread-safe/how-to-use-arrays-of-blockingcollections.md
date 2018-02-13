@@ -1,5 +1,5 @@
 ---
-title: "Guide pratique : utiliser des tableaux de collections de blocage dans un pipeline"
+title: 'Comment : utiliser des tableaux de collections de blocage dans un pipeline'
 ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net
@@ -11,17 +11,21 @@ ms.topic: article
 dev_langs:
 - csharp
 - vb
-helpviewer_keywords: thread-safe collections, blocking collections in pipeline
+helpviewer_keywords:
+- thread-safe collections, blocking collections in pipeline
 ms.assetid: a39c7ec3-3ad7-4f4d-8fe4-b3e9dbabe2ed
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: ab60561372f2c30055aed95ff60599ea80da1eb8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 753c58686e943f5753c76a8d695f4401c4a69952
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="how-to-use-arrays-of-blocking-collections-in-a-pipeline"></a>Comment : utiliser des tableaux de collections de blocage dans un pipeline
 L’exemple suivant montre comment utiliser des tableaux d’objets <xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> avec des méthodes statiques telles que <xref:System.Collections.Concurrent.BlockingCollection%601.TryAddToAny%2A> et <xref:System.Collections.Concurrent.BlockingCollection%601.TryTakeFromAny%2A> pour implémenter le transfert de données rapide et flexible entre des composants.  

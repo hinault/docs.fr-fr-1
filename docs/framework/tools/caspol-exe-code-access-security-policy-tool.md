@@ -27,11 +27,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 0054e77138218e83693c13727866e8e6841170f9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 6ab363e833ecde86a17d9adea3fcd26351725868
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (outil Stratégie de sécurité d'accès du code)
 L'outil Stratégie de sécurité d'accès du code (CAS) (Caspol.exe) permet aux utilisateurs et aux administrateurs de modifier la stratégie de sécurité au niveau de l'ordinateur, de l'utilisateur et de l'entreprise.  
@@ -114,7 +114,7 @@ caspol [options]
 ## <a name="remarks"></a>Notes  
  La stratégie de sécurité se définit sur trois niveaux : ordinateur, utilisateur et entreprise. Le jeu d'autorisations dont bénéficie un assembly est déterminé par l'intersection entre les jeux d'autorisations accordés par ces trois niveaux de stratégie. Chaque niveau de stratégie est représenté par une structure hiérarchique de groupes de codes. Chaque groupe de codes possède une condition d'appartenance qui détermine quel code est membre de ce groupe. Un jeu d'autorisations nommé est également associé à chaque groupe de codes. Ce jeu d'autorisations spécifie les autorisations que peut accorder le runtime au code qui satisfait à la condition d'appartenance. Une hiérarchie de groupes de codes et les jeux d'autorisations nommés associés définissent et gèrent chaque niveau de la stratégie de sécurité. Vous pouvez utiliser les options **–user**, **-customuser**, **–machine** et **-enterprise** pour définir le niveau de stratégie de sécurité.  
   
- Pour plus d'informations sur les stratégies de sécurité et sur la manière dont le runtime détermine les autorisations à accorder au code, consultez [Gestion de la stratégie de sécurité](http://msdn.microsoft.com/en-us/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
+ Pour plus d'informations sur les stratégies de sécurité et sur la manière dont le runtime détermine les autorisations à accorder au code, consultez [Gestion de la stratégie de sécurité](http://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9).  
   
 ## <a name="referencing-code-groups-and-permission-sets"></a>Références aux groupes de codes et aux jeux d'autorisations  
  Pour faciliter les références aux groupes de codes d'une hiérarchie, l'option **-list** affiche une liste des groupes de codes avec des retraits et les étiquettes numériques correspondantes (1, 1.1, 1.1.1, etc.). Les autres opérations effectuées depuis la ligne de commande qui ciblent les groupes de codes utilisent également les étiquettes numériques pour faire référence à des groupes de codes particuliers.  

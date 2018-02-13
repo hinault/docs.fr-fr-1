@@ -1,9 +1,11 @@
 ---
 title: "Configuration requise pour le .NET Framework"
+description: "Découvrez la configuration requise en termes de matériel, de système d’exploitation et de logiciels pour installer .NET Framework 4.5 et versions ultérieures."
 ms.custom: updateeachrelease
-ms.date: 10/17/2017
+ms.date: 02/02/2018
 ms.prod: .net-framework
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.topic: article
 helpviewer_keywords:
 - software requirements
@@ -15,16 +17,31 @@ ms.assetid: 298275e2-da1d-4618-9f74-6a3567832350
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f206dd52f5fd6dc114ea35ce22df05e0fcff956c
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: a0cfbcbc4c2c0857c1fe4163484a43f4521444a3
+ms.sourcegitcommit: be1fb5d9447ad459bef22b91a91c72e3e0b2d916
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="net-framework-system-requirements"></a>Configuration requise pour le .NET Framework
 
-Les tableaux de cette rubrique indiquent la configuration matérielle et logicielle requise, ainsi que la configuration du système d’exploitation, pour le .NET Framework 4.5 et ses versions intermédiaires (4.5.1 et 4.5.2), le [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] et ses versions intermédiaires (4.6.1 et 4.6.2), ainsi que le .NET Framework 4.7 et sa version intermédiaire (4.7.1). Les environnements de développement qui vous permettent de développer des applications pour le .NET Framework ont des exigences différentes.
+Les tableaux de cette rubrique indiquent la configuration matérielle et logicielle requise, ainsi que celle du système d'exploitation pour les versions .NET Framework suivantes :
+
+* .NET Framework 4.5 et ses versions intermédiaires (4.5.1 et 4.5.2).
+* .NET Framework 4.6 et ses versions intermédiaires (4.6.1 et 4.6.2).
+* .NET Framework 4.7 et sa version intermédiaire (4.7.1).
+
+Les environnements de développement qui vous permettent de développer des applications pour le .NET Framework ont des exigences différentes.
+
+> [!IMPORTANT]
+> Toutes les versions .NET Framework depuis la version .NET Framework 4 sont des mises à jour sur place, donc une seule version 4.x peut être présente sur un système.
+> En outre, des versions .NET Framework spécifiques sont pré-installées sur certaines versions du système d’exploitation Windows. Cela signifie que :
+>
+> * Si une version ultérieure est déjà installée sur l’ordinateur, vous ne pouvez pas installer une version 4.x précédente.
+> * Si une version .NET spécifique est pré-installée sur le système d’exploitation, vous ne pouvez pas installer une version 4.x précédente sur le même ordinateur.
+> * Si vous installez une version ultérieure, il est inutile de désinstaller d’abord la version précédente.
 
 Pour obtenir des informations et des liens pour le téléchargement, consultez [Installer le .NET Framework pour les développeurs](../../../docs/framework/install/guide-for-developers.md).
 
@@ -84,7 +101,7 @@ L’installation du .NET Framework nécessite des privilèges d’administrateur
 
  **Remarques :**
 
-- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] inclut le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], il n'est donc pas nécessaire de l'installer séparément. De même, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] inclut le [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
+- [!INCLUDE[winserver8](../../../includes/winserver8-md.md)] inclut le [!INCLUDE[net_v45](../../../includes/net-v45-md.md)], il n’est donc pas nécessaire de l’installer séparément. De même, [!INCLUDE[winblue_server_2](../../../includes/winblue-server-2-md.md)] inclut le [!INCLUDE[net_v451](../../../includes/net-v451-md.md)].
 
 - Le .NET Framework offre une prise en charge limitée du rôle Server Core avec Windows Server 2008 R2 SP1 ou ultérieur. Pour obtenir la liste des API non prises en charge, consultez la [fonctionnalité .NET Server Core](https://msdn.microsoft.com/library/ee391632.aspx).
 

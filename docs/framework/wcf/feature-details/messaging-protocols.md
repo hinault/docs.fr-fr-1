@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 600a1bd57015c6a64a51bf99f3ded35a375e62fe
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 75a39fa1d0301a48cec7ad61c968ee3fc82d189c
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="messaging-protocols"></a>Protocoles de messagerie
 La pile de canaux [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilise l'encodage et les canaux de transport pour transformer la représentation du message interne en son format de transmission et l'envoyer en utilisant un transport particulier. Le transport le plus couramment utilisé pour l'interopérabilité des services Web est le HTTP, et les encodages les plus couramment utilisés par les services Web sont SOAP 1.1 basé sur XML, SOAP 1.2 et MTOM (Message Transmission Optimization Mechanism).  
@@ -61,19 +63,19 @@ W3C Web Services Addressing 1.0 - Métadonnées|http://www.w3.org/TR/ws-addr-me
 |------------|---------------------------------------------------|  
 |s11|http://schemas.xmlsoap.org/soap/envelope|  
 |s12|http://www.w3.org/2003/05/soap-envelope|  
-|wsa|http://www.w3.org/2004/08/Addressing|  
+|wsa|http://www.w3.org/2004/08/addressing|  
 |wsam|http://www.w3.org/2007/05/addressing/metadata|  
 |wsap|http://schemas.xmlsoap.org/ws/2004/09/policy/addressing|  
 |wsa10|http://www.w3.org/2005/08/addressing (page pouvant être en anglais)|  
 |wsaw10|http://www.w3.org/2006/05/addressing/wsdl|  
 |xop|http://www.w3.org/2004/08/xop/include|  
 |xmime|http://www.w3.org/2004/06/xmlmime<br /><br /> http://www.w3.org/2005/05/xmlmime|  
-point de distribution|http://schemas.microsoft.com/net/2006/06/duplex|  
+dp|http://schemas.microsoft.com/net/2006/06/duplex|  
   
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 et SOAP 1.2  
   
 ### <a name="envelope-and-processing-model"></a>Enveloppe et modèle de traitement  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente le traitement d'enveloppe SOAP 1.1 en suivant les profils Basic Profile 1.1 (BP11) et Basic Profile 1.0 (SSBP10). Le traitement d'enveloppe SOAP 1.2 est implémenté selon SOAP12-Part1.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente le traitement d’enveloppe SOAP 1.1 suivant Basic Profile 1.1 (BP11) et Basic Profile 1.0 (SSBP10). Le traitement d'enveloppe SOAP 1.2 est implémenté selon SOAP12-Part1.  
   
  Cette section explique des certains choix d'implémentation pris par [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] quant à BP11 et SOAP12-Part1.  
   
@@ -107,7 +109,7 @@ point de distribution|http://schemas.microsoft.com/net/2006/06/duplex|
 -   B2212 : les clients [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prennent en charge les cookies HTTP conformément à 3.4.8.  
   
 #### <a name="soap-12-http-binding"></a>Liaison HTTP SOAP 1,2  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente la liaison HTTP SOAP 1.2 telle que décrite dans la spécification SOAP 1.2-part 2 (SOAP12Part2) avec les éclaircissements suivants.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente la liaison HTTP SOAP 1.2 telle que décrite la spécification SOAP, 1.2-partie 2 (SOAP12Part2) avec les éclaircissements suivants.  
   
  SOAP 1.2 a introduit un paramètre d'action facultatif pour le type de média `application/soap+xml`. Ce paramètre est utile pour optimiser la distribution du message sans que le corps du message SOAP soit analysé lorsque la spécification WS-Addressing n'est pas utilisée.  
   
@@ -118,7 +120,7 @@ point de distribution|http://schemas.microsoft.com/net/2006/06/duplex|
  Lorsque la spécification WS-Addressing est désactivée et qu'une demande entrante ne contient pas de paramètre d'action, l'`Action` du message est considérée comme non spécifiée.  
   
 ## <a name="ws-addressing"></a>WS-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente 3 versions de WS-Addressing :  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente 3 versions de WS-Addressing :  
   
 -   WS-Addressing 2004/08  
   
@@ -130,7 +132,7 @@ point de distribution|http://schemas.microsoft.com/net/2006/06/duplex|
  Toutes les versions de WS-Addressing que [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente utilisent des références de point de terminaison pour décrire des points de terminaison.  
   
 #### <a name="endpoint-references-and-ws-addressing-versions"></a>Références de point de terminaison et versions de WS-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente plusieurs protocoles d'infrastructure qui utilisent WS-Addressing et en particulier l'élément `EndpointReference` et la classe `W3C.WsAddressing.EndpointReferenceType` (par exemple, le WS-ReliableMessaging, WS-SecureConversation et WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend en charge l'utilisation des deux versions de WS-Addressing avec d'autres protocoles d'infrastructure. Les points de terminaison [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prennent en charge une version de WS-Addressing par point de terminaison.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente un certain nombre de protocoles d’infrastructure qui utilisent WS-Addressing et en particulier le `EndpointReference` élément et `W3C.WsAddressing.EndpointReferenceType` classe (par exemple, WS-ReliableMessaging, WS-SecureConversation et WS-Trust). [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prend en charge l'utilisation des deux versions de WS-Addressing avec d'autres protocoles d'infrastructure. Les points de terminaison [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] prennent en charge une version de WS-Addressing par point de terminaison.  
   
  Pour R3111, l'espace de noms pour l'élément `EndpointReference` ou le type utilisé dans les messages échangés avec un point de terminaison [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] doit correspondre à la version de WS-Addressing implémentée par ce point de terminaison.  
   
@@ -174,7 +176,7 @@ point de distribution|http://schemas.microsoft.com/net/2006/06/duplex|
  Les applications qui interagissent avec les applications [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] peuvent ajouter que ces en-têtes de message et [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] les traitera en conséquence.  
   
 #### <a name="reference-parameters-and-properties"></a>Paramètres et propriétés de référence  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente le traitement des paramètres de référence de point de terminaison et des propriétés de référence  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] implémente le traitement des paramètres de référence de point de terminaison et les propriétés de référence  
   
  conformément aux spécifications respectives.  
   
@@ -232,7 +234,7 @@ point de distribution|http://schemas.microsoft.com/net/2006/06/duplex|
 ### <a name="wsdl-11-binding-and-ws-policy-assertions"></a>Liaison WSDL 1.1 et assertions de WS-Policy  
   
 #### <a name="indicating-use-of-ws-addressing"></a>Utilisation recommandée de WS-Addressing  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise des assertions de stratégie pour indiquer la prise en charge d'un point de terminaison pour une version particulière de WS-Addressing.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise les assertions de stratégie pour indiquer la prise en charge de point de terminaison pour une version particulière de WS-Addressing.  
   
  L'assertion de stratégie suivante possède l'objet de stratégie de point de terminaison [WS-PA] et indique que les messages envoyés et reçus depuis le point de terminaison doivent utiliser WS-Addressing 2004/08.  
   
@@ -276,7 +278,7 @@ point de distribution|http://schemas.microsoft.com/net/2006/06/duplex|
   
  Toutefois, certains modèles d’échange de messages profitent du fait que deux connexions HTTP réciproques indépendantes soient établies entre le demandeur et le répondeur, par exemple dans le cas de messages unidirectionnels non sollicités envoyés par le répondeur.  
   
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] propose un utilitaire grâce auquel deux canaux de transport sous-jacents peuvent former un canal duplex composite, où un canal est utilisé pour les messages d'entrée et l'autre est utilisé pour les messages de sortie. Dans le cas du transport HTTP, le canal duplex composite fournit deux connexions HTTP réciproques. Le demandeur utilise une connexion pour envoyer des messages au répondeur, et le répondeur utilise l'autre pour renvoyer des messages au demandeur.  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] propose un utilitaire grâce auquel deux canaux de transport sous-jacents peuvent former un canal Duplex Composite, où un canal est utilisé pour les messages d’entrée et l’autre est utilisé pour les messages de sortie. Dans le cas du transport HTTP, le canal duplex composite fournit deux connexions HTTP réciproques. Le demandeur utilise une connexion pour envoyer des messages au répondeur, et le répondeur utilise l'autre pour renvoyer des messages au demandeur.  
   
  Pour les réponses envoyées via des demandes HTTP distinctes, l'assertion WS-AM est :  
   
@@ -519,7 +521,7 @@ Content-Length: 0
 msg-id    =       [CFWS] "<" id-left "@" id-right ">" [CFWS]  
 ```  
   
- et est effectivement une adresse de messagerie entre «\<» et « > ». Les préfixe et suffixe `[CFWS]` ont été ajoutés dans RFC 2822 pour contenir des commentaires et ne doivent pas être utilisés pour préserver l'interopérabilité.  
+ et est effectivement une adresse de messagerie encadrée par des «\<» et « > ». Les préfixe et suffixe `[CFWS]` ont été ajoutés dans RFC 2822 pour contenir des commentaires et ne doivent pas être utilisés pour préserver l'interopérabilité.  
   
  R4143 : la valeur de l'en-tête Content-ID pour la partie MIME de l'ensemble d'informations doit suivre la production `msg-id` de RFC 2822 avec les parties `[CFWS]` préfixe et suffixe omises.  
   
@@ -574,7 +576,7 @@ mail-address   =     id-left "@" id-right
  Un point de terminaison [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] configuré pour utiliser MTOM enverra toujours des messages encodés en MTOM. Même si aucune partie ne répond aux critères requis, le message est tout de même encodé en MTOM (sérialisé comme un package MIME avec une partie MIME unique qui contient l'enveloppe SOAP).  
   
 ### <a name="ws-policy-assertion-for-mtom"></a>Assertion de WS-Policy pour MTOM  
- [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise l'assertion de stratégie suivante pour indiquer l'utilisation MTOM par point de terminaison :  
+ [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise l’assertion de stratégie suivante pour indiquer l’utilisation MTOM par point de terminaison :  
   
 ```xml  
 <wsoma:OptimizedMimeSerialization ... />  

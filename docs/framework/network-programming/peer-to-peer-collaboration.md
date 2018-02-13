@@ -8,19 +8,20 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 607fadad19d4fe69800798583a14d7fd9082ff23
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5060e12fb6a9fcc1bac1dfe6ccdcbaea9f2e6385
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="peer-to-peer-collaboration"></a>Collaboration pair à pair
-Les réseaux pair à pair utilisent des ordinateurs relativement puissants (des ordinateurs personnels) situés à la périphérie d’Internet et qui permettent davantage que de simples tâches de calcul basées sur le client. L’ordinateur personnel moderne dispose d’un processeur très rapide, d’une très grande mémoire et d’un disque dur volumineux. Cependant, aucun d’eux n’est entièrement utilisé lors de l’exécution des tâches informatiques courantes, comme l’envoi et la réception d’e-mails ou la navigation web. Les PC modernes peuvent facilement jouer le rôle de client et de serveur (pair) pour de nombreux types d’applications.  
+Les réseaux pair à pair utilisent des ordinateurs relativement puissants (des ordinateurs personnels) situés à la périphérie d’Internet et qui permettent davantage que de simples tâches de calcul basées sur le client. L’ordinateur personnel moderne (PC) a un processeur très rapide, une mémoire et un disque dur volumineux, qui sont entièrement utilisées lors de l’exécution des tâches informatiques courantes telles que la messagerie électronique et la navigation sur le Web. Les PC modernes peuvent facilement jouer le rôle de client et de serveur (pair) pour de nombreux types d’applications.  
   
 -   L’infrastructure de collaboration pair à pair est une version simplifiée de l’infrastructure pair à pair de Microsoft Windows qui s’appuie sur le service Voisinage immédiat de Windows Vista et des plateformes ultérieures. Elle est particulièrement adaptée pour les applications pair à pair situées dans un sous-réseau pour lequel est exécuté le service Voisinage immédiat. Toutefois, elle peut également être utilisée pour les points de terminaison ou les contacts Internet. Elle comprend le Gestionnaire de contacts commun qui est utilisé par Live Messenger et les autres applications Live pour déterminer la présence, la disponibilité et les points de terminaison des contacts.  
   

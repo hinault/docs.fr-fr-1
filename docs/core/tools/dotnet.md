@@ -7,12 +7,13 @@ ms.date: 08/14/2017
 ms.topic: article
 ms.prod: .net-core
 ms.technology: dotnet-cli
-ms.workload: dotnetcore
-ms.openlocfilehash: 6db2bb6003e630aab900222eb20e33af287cf9c5
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2eea7d13994bfddc89d8f3513308a6620c53c88c
+ms.sourcegitcommit: f28752eab00d2bd97e971542c0f49ce63cfbc239
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="dotnet-command"></a>Commande dotnet
 
@@ -46,7 +47,7 @@ Le seul cas où la commande `dotnet` est utilisée seule est l’exécution d’
 
 # <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
-`--additionaldeps <PATH>`
+`--additional-deps <PATH>`
 
 Chemin du fichier *deps.json* supplémentaire.
 

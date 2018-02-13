@@ -4,8 +4,12 @@
 #### [m_WriteList, champ](m_writelist.md)
 ### [ConnectionGroup, classe](connectiongroup.md)
 #### [m_ConnectionList, champ](m_connectionlist.md)
+### [CoreResponseData, classe](coreresponsedata.md)
+#### [m_ResponseHeaders, champ](coreresponsedata_m_responseheaders.md)
+#### [m_StatusCode, champ](coreresponsedata_m_statuscode.md)
 ### HttpWebRequest, classe
 #### [_AutoRedirects, champ](_autoredirects.md)
+#### [_CoreResponse, champ](httpwebrequest__coreresponse.md)
 #### [_HttpResponse, champ](_httpresponse.md)
 ### ServicePoint, classe
 #### [m_ConnectionGroupList, champ](m_connectiongrouplist.md)

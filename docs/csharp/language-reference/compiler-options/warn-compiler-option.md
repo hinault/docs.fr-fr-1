@@ -17,19 +17,19 @@ ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ab5748f43777ec545e76100543473785894461cb
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6a1f2c55aa078adb213a93dc5aff7ced40793bfa
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="warn-c-compiler-options"></a>/warn (Options du compilateur C#)
-L’option **/warn** spécifie le niveau d’avertissement que le compilateur doit afficher.  
+# <a name="-warn-c-compiler-options"></a>-warn (Options du compilateur C#)
+L’option **-warn** spécifie le niveau d’avertissement que le compilateur doit afficher.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```console  
-/warn:option  
+-warn:option  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -44,12 +44,12 @@ L’option **/warn** spécifie le niveau d’avertissement que le compilateur do
 |3|Affiche les avertissements de niveau 2, ainsi que certains avertissements moins graves, tels que les avertissements concernant les expressions toujours évaluées à `true` ou `false`.|  
 |4 (valeur par défaut)|Affiche les avertissements de niveau 3, ainsi que les avertissements d’information.|  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Pour obtenir des informations sur une erreur ou un avertissement, vous pouvez rechercher le code d’erreur dans l’index de l’aide. Il existe d’autres façons d’obtenir des informations sur une erreur ou un avertissement, qui sont décrites dans [Erreurs du compilateur C#](../../../csharp/language-reference/compiler-messages/index.md).  
   
- Utilisez [/warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) pour traiter tous les avertissements comme des erreurs. Utilisez [/nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) pour désactiver certains avertissements.  
+ Utilisez [-warnaserror](../../../csharp/language-reference/compiler-options/warnaserror-compiler-option.md) pour traiter tous les avertissements comme des erreurs. Utilisez [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md) pour désactiver certains avertissements.  
   
- **/w** est la forme abrégée de **/warn**.  
+ **-w** est la forme abrégée de **-warn**.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
@@ -65,7 +65,7 @@ L’option **/warn** spécifie le niveau d’avertissement que le compilateur do
  Compilez `in.cs` et faites en sorte que le compilateur n’affiche que les avertissements de niveau 1 :  
   
 ```console  
-csc /warn:1 in.cs  
+csc -warn:1 in.cs  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

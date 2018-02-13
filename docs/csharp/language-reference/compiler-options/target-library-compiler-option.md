@@ -13,27 +13,27 @@ ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
 caps.latest.revision: "12"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: e66e2edd86dc4a1302b23dab07226a5d56cb79b8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 242f8ada7cbffc4a6986339d28c4284b50afca25
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="targetlibrary-c-compiler-options"></a>/target:library (Options du compilateur C#)
-L’option **/target:library** indique au compilateur de créer une bibliothèque de liens dynamiques (DLL) à la place d’un fichier exécutable (EXE).  
+# <a name="-targetlibrary-c-compiler-options"></a>-target:library (Options du compilateur C#)
+L’option **-target:library** indique au compilateur de créer une bibliothèque de liens dynamiques (DLL) à la place d’un fichier exécutable (EXE).  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```console  
-/target:library  
+-target:library  
 ```  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  La DLL est créée avec l’extension .dll.  
   
- Sauf spécification contraire avec l’option [/out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), le fichier de sortie prend le nom du premier fichier d’entrée.  
+ Sauf spécification contraire avec l’option [-out](../../../csharp/language-reference/compiler-options/out-compiler-option.md), le fichier de sortie prend le nom du premier fichier d’entrée.  
   
- Quand ils sont spécifiés dans la ligne de commande, tous les fichiers jusqu’à l’option **/out** ou **/target:module** suivante sont utilisés pour créer le fichier .dll.  
+ Quand ils sont spécifiés dans la ligne de commande, tous les fichiers jusqu’à l’option **-out** ou **-target:module** suivante sont utilisés pour créer le fichier .dll.  
   
  Lors de la création d’un fichier .dll, une méthode [Main](../../../csharp/programming-guide/main-and-command-args/index.md) n’est pas obligatoire.  
   
@@ -51,9 +51,9 @@ L’option **/target:library** indique au compilateur de créer une bibliothèqu
  Compilez `in.cs`, en créant `in.dll` :  
   
 ```console  
-csc /target:library in.cs  
+csc -target:library in.cs  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  
- [/target (Options du compilateur c#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
+ [-target (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/target-compiler-option.md)  
  [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)

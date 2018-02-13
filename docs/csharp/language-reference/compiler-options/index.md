@@ -15,16 +15,16 @@ ms.assetid: d3403556-1816-4546-a782-e8223a772e44
 caps.latest.revision: "21"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 28878fca5bccf23f906395298c8b2b5b7499fd40
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: 59000f60acdc8ada11bc5abb9e91b5f53d42b9ae
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="c-compiler-options"></a>Options du compilateur C#
 Le compilateur produit des fichiers exécutables (.exe), des bibliothèques de liens dynamiques (.dll) ou des modules de code (.netmodule).  
   
- Chaque option du compilateur est disponible sous deux formes : **-option** et **/option**. La documentation ne présente que la forme **/option**.  
+ Chaque option du compilateur est disponible sous deux formes : **-option** et **/option**. La documentation présente uniquement la forme **-option**.  
   
  Dans Visual Studio, vous définissez les options du compilateur dans le fichier web.config. Pour plus d’informations, consultez [\<compilateur> Élément](../../../framework/configure-apps/file-schema/compiler/compiler-element.md).  
   

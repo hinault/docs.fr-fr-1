@@ -13,19 +13,19 @@ ms.assetid: c290ff5e-47f4-4a85-9bb3-9c2525b0be04
 caps.latest.revision: "46"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5d35a91805f6189f60803056c541ce8344c024f0
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 6a7a505f955f1faf73198b3670754dbb492ff638
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="platform-c-compiler-options"></a>/platform (Options du compilateur C#)
+# <a name="-platform-c-compiler-options"></a>-platform (Options du compilateur C#)
 Spécifie la version du CLR (Common Language Runtime) qui peut exécuter l’assembly.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```console  
-/platform:string  
+-platform:string  
 ```  
   
 #### <a name="parameters"></a>Paramètres  
@@ -48,13 +48,13 @@ Spécifie la version du CLR (Common Language Runtime) qui peut exécuter l’ass
   
  Sur un système d'exploitation Windows 64 bits :  
   
--   Les assemblys compilés avec **/platform:x86** s’exécutent sur le CLR 32 bits fonctionnant sous WOW64.  
+-   Les assemblys compilés avec **-platform:x86** s’exécutent sur le CLR 32 bits fonctionnant sous WOW64.  
   
--   Une DLL compilée avec **/platform:anycpu** s’exécute sur le même CLR que le processus dans lequel elle est chargée.  
+-   Une DLL compilée avec **-platform:anycpu** s’exécute sur le même CLR que le processus dans lequel elle est chargée.  
   
--   Les fichiers exécutables compilés avec **/platform:anycpu** s’exécutent sur le CLR 64 bits.  
+-   Les fichiers exécutables compilés avec **-platform:anycpu** s’exécutent sur le CLR 64 bits.  
   
--   Les fichiers exécutables compilés avec **/platform:anycpu32bitpreferred** s’exécutent sur le CLR 32 bits.  
+-   Les fichiers exécutables compilés avec **-platform:anycpu32bitpreferred** s’exécutent sur le CLR 32 bits.  
   
  Le paramètre **anycpu32bitpreferred** ne vaut que pour les fichiers exécutables (.EXE) et nécessite le .NET Framework 4.5.  
   
@@ -68,15 +68,15 @@ Spécifie la version du CLR (Common Language Runtime) qui peut exécuter l’ass
   
 3.  Modifiez la propriété **Plateforme cible** puis, pour les projets qui ciblent le .NET Framework 4.5, cochez ou décochez la case **Préférer 32 bits**.  
   
- **Notez que /platform** n’est pas disponible dans l’environnement de développement de Visual C# Express.  
+ **Notez que -platform** n’est pas disponible dans l’environnement de développement de Visual C# Express.  
   
  Pour plus d’informations sur la façon de définir cette option du compilateur par programmation, consultez <xref:VSLangProj80.CSharpProjectConfigurationProperties3.PlatformTarget%2A>.  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant montre comment utiliser l’option **/platform** pour préciser que l’application doit être exécutée par le CLR 64 bits sur un système d’exploitation Windows 64 bits.  
+ L’exemple suivant montre comment utiliser l’option **-platform** pour préciser que l’application doit être exécutée par le CLR 64 bits sur un système d’exploitation Windows 64 bits.  
   
 ```console  
-csc /platform:anycpu filename.cs  
+csc -platform:anycpu filename.cs  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

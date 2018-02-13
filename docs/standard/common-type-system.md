@@ -10,11 +10,14 @@ ms.prod: .net
 ms.technology: dotnet-standard
 ms.devlang: dotnet
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: 9c2cc090dfd5405def0cd6ab9ec1771be4a332a5
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: d7626b0a6a902465416187b2c09d624dfe9a9773
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="common-type-system--common-language-specification"></a>Système de type commun (CTS, Common Type System) et spécification CLS (Common Language Specification)
 
@@ -41,7 +44,7 @@ CTS définit plusieurs catégories de types, chacun avec une sémantique et une 
 
 *   Classes
 *   Structures
-*   Énumérations
+*   Enums
 *   Interfaces
 *   Délégués
 
@@ -57,5 +60,5 @@ Vous pouvez consulter les documents de la section [Autres ressources](#more-reso
 
 ## <a name="more-resources"></a>Autres ressources
 
-*   [Système de type commun](https://msdn.microsoft.com/library/zcx1eb1e.aspx)
-*   [CLS (Common Language Specification)](https://msdn.microsoft.com/library/12a7a7h3.aspx)
+*   [Système de type commun](./base-types/common-type-system.md)
+*   [CLS (Common Language Specification)](language-independence-and-language-independent-components.md)

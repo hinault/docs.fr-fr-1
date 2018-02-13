@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.assetid: f8806f6b-3ac7-4ee6-9b3e-c524d5301ae9
-ms.openlocfilehash: ac19d4208da4f8ee6dd3e071ab70dbc41a0cd065
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b6b3ce53a08cfacfacb19266b0be216a40633352
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="string-interpolation-in-c"></a>Interpolation de chaîne en C# #
 
@@ -30,7 +30,7 @@ echo "My name is $name.";
 
 Dans C# 6, nous avons enfin ce style d’interpolation de chaîne. Vous pouvez utiliser un `$` avant une chaîne pour indiquer qu’elle doit remplacer les variables/expressions par leurs valeurs.
 
-## <a name="prerequisites"></a>Conditions préalables
+## <a name="prerequisites"></a>Prérequis
 Vous devez configurer votre ordinateur pour exécuter .NET core. Vous trouverez les instructions d’installation sur la page de [.NET Core](https://www.microsoft.com/net/core).
 Vous pouvez exécuter cette application sur Windows, Ubuntu Linux, Mac OS ou dans un conteneur Docker. Vous devez installer l’éditeur de code de votre choix. Les descriptions ci-dessous utilisent [Visual Studio Code](https://code.visualstudio.com/), un éditeur open source et multiplateforme. Cependant, vous pouvez utiliser les outils avec lesquels vous êtes le plus à l’aise.
 
@@ -78,7 +78,7 @@ This is line number 5
 
 ## <a name="how-string-interpolation-works"></a>Fonctionnement de l’interpolation de chaîne
 
-En arrière-plan, cette syntaxe d’interpolation de chaîne est convertie en String.Format par le compilateur. Par conséquent, vous pouvez faire [les mêmes choses qu’avec String.Format auparavant](https://msdn.microsoft.com/en-us/library/dwhawy9k(v=vs.110).aspx).
+En arrière-plan, cette syntaxe d’interpolation de chaîne est convertie en String.Format par le compilateur. Par conséquent, vous pouvez faire [les mêmes choses qu’avec String.Format auparavant](https://msdn.microsoft.com/library/dwhawy9k(v=vs.110).aspx).
 
 Par exemple, vous pouvez ajouter le remplissage et la mise en forme des nombres :
 

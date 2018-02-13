@@ -19,11 +19,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: de9d94c9b4dfbdccb4ea5b3a7281715460d076a9
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ffe4670ef07b0a9b541bf2099958aa943bba2f68
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="overview-of-the-net-framework"></a>Vue d’ensemble du .NET Framework
 
@@ -96,7 +96,7 @@ Comme pour toute bibliothèque de classes orientée objet, les types .NET Framew
 
 - Applications orientées service qui utilisent Windows Communication Foundation (WCF). Consultez [Applications orientées service avec WCF](../../../docs/framework/wcf/index.md).
 
-- Applications prenant en charge les flux de travail et qui utilisent Windows Workflow Foundation (WF). Consultez [Génération de flux de travail dans le .NET Framework](http://msdn.microsoft.com/en-us/cbf3880f-dc7b-466d-b808-1109b1223f4a).
+- Applications prenant en charge les flux de travail et qui utilisent Windows Workflow Foundation (WF). Consultez [Génération de flux de travail dans le .NET Framework](http://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a).
 
 Les classes Windows Forms sont un ensemble complet de types réutilisables qui simplifient grandement le développement GUI Windows. Si vous écrivez une application Web Form ASP.NET, vous pouvez utiliser les classes Web Forms.
 
@@ -106,5 +106,5 @@ Les classes Windows Forms sont un ensemble complet de types réutilisables qui s
 [Guide d’installation](../../../docs/framework/install/index.md)   
 [Guide de développement](../../../docs/framework/development-guide.md)   
 [Outils](../../../docs/framework/tools/index.md)   
-[Exemples .NET Framework](http://msdn.microsoft.com/en-us/177055f8-4a1f-43e7-aee6-995c196079b1)   
+[Exemples .NET Framework](http://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
 [Bibliothèque de classes .NET Framework](http://go.microsoft.com/fwlink/?LinkID=227195)

@@ -1,26 +1,26 @@
 ---
-title: "Démarrages rapides - Guide C#"
+title: "Didacticiels interactifs pour C# - Démarrages rapides pour C#"
 description: "Découvrez C# dans votre navigateur et prenez en main votre propre environnement de développement"
 keywords: "C#, Prise en main, Leçons, Interactif"
 author: billwagner
 ms.author: wiwagn
-ms.date: 09/18/2017
-ms.topic: article
+ms.date: 01/30/2018
+ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4443609c9494ca93cbc5934dd62fedf434599962
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 3a76c28e4cc32ab883488ad84df90e6535b583d9
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="c-quick-starts"></a>Démarrages rapides pour C# #
+# <a name="c-quickstarts"></a>Démarrages rapides pour C# #
 
 Bienvenue dans les Démarrages rapides pour C#. Ceux-ci commencent par des leçons interactives que vous pouvez exécuter dans votre navigateur.
 
-Les premières leçons expliquent les concepts de C# à l’aide de petits extraits de code. Vous apprendrez les bases de la syntaxe C# et comment utiliser des types de données tels que des chaînes, des nombres et des valeurs booléennes. Tout est interactif et vous serez prêt à écrire du code en quelques minutes. Ces premières leçons prennent pour acquis que vous n’avez aucune connaissance préalable de la programmation ou du langage C#. 
+Les premières leçons expliquent les concepts de C# à l’aide de petits extraits de code. Vous apprendrez les bases de la syntaxe C# et comment utiliser des types de données tels que des chaînes, des nombres et des valeurs booléennes. Tout est interactif et vous serez prêt à écrire du code en quelques minutes. Ces premières leçons prennent pour acquis que vous n’avez aucune connaissance préalable de la programmation ou du langage C#.
 
 Tous les guides de démarrage rapide proposés après la leçon Hello World sont disponibles en ligne dans le navigateur ou dans votre propre environnement de développement. À la fin de chaque leçon, vous décidez si vous souhaitez effectuer le guide de démarrage rapide suivant en ligne ou sur votre propre ordinateur. Vous trouverez également des liens pour vous aider à configurer votre environnement et passer au guide de démarrage rapide suivant sur votre ordinateur.
 
@@ -39,6 +39,12 @@ Ce guide de démarrage rapide part du principe que vous avez terminé le didacti
 Le guide de démarrage rapide [Branches et boucles](branches-and-loops.yml) explique les bases de la sélection de différents chemins d’exécution de code en fonction des valeurs stockées dans des variables. Vous allez apprendre les principes fondamentaux du flux de contrôle, sur la base duquel les programmes prennent des décisions et choisissent différentes actions. Vous pouvez également [exécuter ce guide de démarrage rapide localement sur votre ordinateur](branches-and-loops-local.md).
 
 Cette leçon prend pour acquis que vous avez terminé les leçons [Hello World](hello-world.yml) et [Nombres en C#](numbers-in-csharp.yml).
+
+## <a name="interpolated-stringsinterpolated-stringsyml"></a>[Chaînes interpolées](interpolated-strings.yml)
+
+Le guide de démarrage rapide [Chaînes interpolées](interpolated-strings.yml) vous montre comment insérer une expression dans une chaîne plus grande. Vous allez apprendre à définir une expression interpolée, à créer une chaîne de résultat à partir d’une chaîne interpolée contenant une ou plusieurs expressions interpolées, et à contrôler la mise en forme, la largeur de colonne et l’alignement des expressions incluses dans la chaîne de résultat. 
+
+Cette leçon prend pour acquis que vous avez terminé les leçons [Hello World](hello-world.yml), [Nombres en C#](numbers-in-csharp.yml) et [Branches et boucles](branches-and-loops.yml).
 
 ## <a name="list-collectionlist-collectionyml"></a>[Collection de listes](list-collection.yml)
 

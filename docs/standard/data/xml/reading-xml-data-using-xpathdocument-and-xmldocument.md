@@ -12,15 +12,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 607d9d3616db0d0bd431fa2ca0b6aee03a85f896
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9282742669c8e3d8b4a856694c76db834282dbf9
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>Lecture de données XML à l’aide de XPathDocument et XmlDocument
 Il existe deux manières de lire un document XML dans l'espace de noms <xref:System.Xml.XPath?displayProperty=nameWithType>. La première consiste à lire un document XML à l'aide de la classe <xref:System.Xml.XPath.XPathDocument> en lecture seule et la seconde à lire un document XML à l'aide de la classe <xref:System.Xml.XmlDocument> modifiable dans l'espace de noms <xref:System.Xml?displayProperty=nameWithType>.  
@@ -60,12 +63,12 @@ document.Load("books.xml");
   
  Pour plus d'informations sur les informations d'encodage fournies par la classe <xref:System.Xml.XmlTextReader>, voir la propriété <xref:System.Xml.XmlTextReader.Encoding%2A> dans la documentation de référence sur la classe <xref:System.Xml.XmlTextReader>.  
   
-## <a name="creating-xpathnavigator-objects"></a>Création d'objet XPathNavigator  
+## <a name="creating-xpathnavigator-objects"></a>Création d’objet XPathNavigator  
  Après avoir lu un document XML dans un objet <xref:System.Xml.XPath.XPathDocument> ou <xref:System.Xml.XmlDocument>, vous pouvez créer un objet <xref:System.Xml.XPath.XPathNavigator> pour sélectionner, évaluer, parcourir et, dans certains cas, modifier les données XML sous-jacentes.  
   
  Les classes <xref:System.Xml.XPath.XPathDocument> et <xref:System.Xml.XmlDocument>, en plus de la classe <xref:System.Xml.XmlNode>, implémentent l'interface <xref:System.Xml.XPath.IXPathNavigable> de l'espace de noms <xref:System.Xml.XPath?displayProperty=nameWithType>. Par conséquent, ces trois classes fournissent une méthode <xref:System.Xml.XPath.IXPathNavigable.CreateNavigator%2A> qui retourne un objet <xref:System.Xml.XPath.XPathNavigator>.  
   
-### <a name="editing-xml-documents-using-the-xpathnavigator-class"></a>Modification de documents XML à l'aide de la classe XPathNavigator  
+### <a name="editing-xml-documents-using-the-xpathnavigator-class"></a>Modification de documents XML à l’aide de la classe XPathNavigator  
  La classe <xref:System.Xml.XPath.XPathNavigator> permet non seulement de sélectionner, d'évaluer et de parcourir des données XML, mais également de modifier un document XML dans certains cas, selon l'objet qui l'a créé.  
   
  La classe <xref:System.Xml.XPath.XPathDocument> est en lecture seule tandis que la classe <xref:System.Xml.XmlDocument> peut être modifiée. Par conséquent, les objets <xref:System.Xml.XPath.XPathNavigator> créés à partir d'un objet <xref:System.Xml.XPath.XPathDocument> ne peuvent pas être utilisés pour modifier un document XML, contrairement à ceux créés par un objet <xref:System.Xml.XmlDocument>. La classe <xref:System.Xml.XPath.XPathDocument> doit être utilisée pour lire un document XML uniquement. Si vous devez modifier un document XML ou accéder à la fonctionnalité supplémentaire fournie par la classe <xref:System.Xml.XmlDocument>, vous devez utiliser la classe <xref:System.Xml.XmlDocument>, de même que pour la gestion des événements.  
@@ -84,6 +87,6 @@ document.Load("books.xml");
  <xref:System.Xml.XPath.XPathDocument>  
  <xref:System.Xml.XPath.XPathNavigator>  
  [Traitement des données XML à l’aide du modèle de données XPath](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
- [Accès aux données XML à l’aide de XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+ [Accès à des données XML à l’aide de XPathNavigator](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
  [Modification de données XML à l’aide de XPathNavigator](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
  [Validation de schéma à l’aide de XPathNavigator](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)

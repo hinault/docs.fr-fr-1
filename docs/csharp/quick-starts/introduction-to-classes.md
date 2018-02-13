@@ -1,23 +1,23 @@
 ---
-title: "Démarrages rapides - Introduction aux classes - Guide C#"
+title: "Guides de démarrage rapide - Introduction aux classes - Guide C#"
 description: "Créez votre premier programme C# et explorez les concepts orientés objet"
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/11/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 55d6050d7573b9088b361fb571b96425533bda1f
-ms.sourcegitcommit: 91691981897cf8451033cb01071d8f5d94017f97
+ms.openlocfilehash: 4e15b1b12b9420ca1781eca3f2578fa24c9ec82a
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="introduction-to-classes"></a>Introduction aux classes
 
-Ce démarrage rapide suppose que vous disposez d’un ordinateur que vous pouvez utiliser pour le développement. La rubrique .NET [Bien démarrer en 10 minutes](https://www.microsoft.com/net/core) contient des instructions pour configurer votre environnement de développement local sur Mac, PC ou Linux. Une brève vue d’ensemble des commandes que vous utiliserez est disponible dans la [présentation des démarrages rapides locaux](local-environment.md) avec des liens pour plus d’informations.
+Ce guide de démarrage rapide suppose que vous disposez d’un ordinateur que vous pouvez utiliser pour le développement. La rubrique .NET [Bien démarrer en 10 minutes](https://www.microsoft.com/net/core) contient des instructions pour configurer votre environnement de développement local sur Mac, PC ou Linux. Une brève vue d’ensemble des commandes que vous utiliserez est disponible dans la [présentation des guides de démarrage rapide locaux](local-environment.md) avec des liens pour plus d’informations.
 
 ## <a name="create-your-application"></a>Créer une application
 
@@ -38,9 +38,9 @@ namespace classes
 }
 ```
 
-Dans ce Démarrage rapide, vous allez créer des types qui représentent un compte bancaire. Les développeurs définissent généralement chaque classe dans un fichier texte différent. Cela simplifie la gestion au fur et à mesure qu’un programme augmente en taille.  Créez un fichier nommé **BankAccount.cs** dans le répertoire **classes**. 
+Dans ce guide de démarrage rapide, vous allez créer des types qui représentent un compte bancaire. Les développeurs définissent généralement chaque classe dans un fichier texte différent. Cela simplifie la gestion au fur et à mesure qu’un programme augmente en taille.  Créez un fichier nommé **BankAccount.cs** dans le répertoire **classes**. 
 
-Ce fichier contiendra la définition d’un ***compte bancaire***. La programmation orientée objet organise le code en créant des types sous la forme de ***classes***. Ces classes contiennent le code qui représente une entité spécifique. La classe `BankAccount` représente un compte bancaire. Le code implémente des opérations spécifiques à travers des méthodes et des propriétés. Dans ce Démarrage rapide, le compte bancaire prend en charge le comportement suivant :
+Ce fichier contiendra la définition d’un ***compte bancaire***. La programmation orientée objet organise le code en créant des types sous la forme de ***classes***. Ces classes contiennent le code qui représente une entité spécifique. La classe `BankAccount` représente un compte bancaire. Le code implémente des opérations spécifiques à travers des méthodes et des propriétés. Dans ce guide de démarrage rapide, le compte bancaire prend en charge le comportement suivant :
 
 1. Il contient un numéro à 10 chiffres qui identifie le compte bancaire de manière unique.
 1. Il contient une chaîne qui stocke le nom du ou des détenteurs.
@@ -76,7 +76,7 @@ namespace classes
 }
 ```
 
-Avant de poursuivre, examinons ce que vous venez de créer.  La déclaration `namespace` permet d’organiser logiquement votre code. Ce Démarrage rapide étant relativement petit, vous allez placer tout le code dans un même espace de noms. 
+Avant de poursuivre, examinons ce que vous venez de créer.  La déclaration `namespace` permet d’organiser logiquement votre code. Ce guide de démarrage rapide étant relativement petit, vous allez placer tout le code dans un même espace de noms. 
 
 `public class BankAccount` définit la classe ou le type que vous créez. Tout ce qui est situé entre `{` et `}` après la déclaration de classe définit le comportement de la classe. La classe `BankAccount` a cinq ***membres***. Les trois premiers sont des ***propriétés***. Les propriétés sont des éléments de données qui peuvent avoir un code qui applique la validation ou d’autres règles. Les deux derniers sont des ***méthodes***. Les méthodes sont des blocs de code qui effectuent une fonction unique. La lecture des noms de chacun des membres doit fournir suffisamment d’informations pour vous permettre (ou à tout autre développeur) de comprendre ce que fait la classe.
 
@@ -199,11 +199,11 @@ Enregistrez le fichier et tapez `dotnet run` pour effectuer un essai.
 
 ## <a name="challenge---log-all-transactions"></a>Test : consigner toutes les transactions
 
-Pour terminer ce Démarrage rapide, vous pouvez écrire la méthode `GetAccountHistory` qui crée une `string` pour l’historique des transactions. Ajoutez cette méthode au type `BankAccount` :
+Pour terminer ce guide de démarrage rapide, vous pouvez écrire la méthode `GetAccountHistory` qui crée une `string` pour l’historique des transactions. Ajoutez cette méthode au type `BankAccount` :
 
 [!code-csharp[History](../../../samples/csharp/classes-quickstart/BankAccount.cs#History "Display transaction history")]
 
-Cette méthode utilise la classe <xref:System.Text.StringBuilder> pour mettre en forme une chaîne contenant une ligne par transaction. Vous avez vu le code de mise en forme de chaîne précédemment dans ces Démarrages rapides. Vous pouvez observer le nouveau caractère `\t`. Celui-ci insère une tabulation pour mettre en forme la sortie.
+Cette méthode utilise la classe <xref:System.Text.StringBuilder> pour mettre en forme une chaîne contenant une ligne par transaction. Vous avez vu le code de mise en forme de chaîne précédemment dans ces guides de démarrage rapide. Vous pouvez observer le nouveau caractère `\t`. Celui-ci insère une tabulation pour mettre en forme la sortie.
 
 Ajoutez cette ligne pour effectuer un essai dans **Program.cs** :
 
@@ -215,6 +215,6 @@ Tapez `dotnet run` pour afficher les résultats.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Si vous êtes bloqué, vous pouvez afficher la source de ce Démarrage rapide [dans notre dépôt GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/).
+Si vous êtes bloqué, vous pouvez afficher la source de ce guide de démarrage rapide [dans notre dépôt GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/classes-quickstart/).
 
-Félicitations, vous avez terminé tous nos Démarrage rapides. Si vous souhaitez en savoir plus, explorez nos [didacticiels](../tutorials/index.md).
+Félicitations, vous avez terminé tous nos guides de démarrage rapide. Si vous souhaitez en savoir plus, explorez nos [didacticiels](../tutorials/index.md).

@@ -5,7 +5,8 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,24 +16,25 @@ helpviewer_keywords:
 - <smtp> element
 - smtp element
 ms.assetid: 220b0329-e384-4e0c-86b4-0945ad17efd9
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mcleblanc
 ms.author: markl
 manager: markl
-ms.workload: dotnet
-ms.openlocfilehash: 598fe3dc2a49187e923cd689f863d0a3327e735f
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f5b2a3b7eec17fbdd12181c29f610d2b2ad32bd4
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="ltsmtpgt-element-network-settings"></a>&lt;SMTP&gt; élément (paramètres réseau)
-Configure le format de remise, de la méthode de remise et à partir de l’adresse pour l’envoi de messages électroniques.  
+Configure le format de remise, de la méthode de remise et à partir de l’adresse pour l’envoi des messages électroniques.  
   
  \<configuration>  
-\<System.NET >  
-\<mailSettings >  
-\<SMTP >  
+\<system.net>  
+\<mailSettings>  
+\<smtp>  
   
 ## <a name="syntax"></a>Syntaxe  
   
@@ -54,7 +56,7 @@ Configure le format de remise, de la méthode de remise et à partir de l’adre
 |Attribut|Description|  
 |---------------|-----------------|  
 |`deliveryFormat`|Spécifie le format de remise de messages électroniques sortants. Les valeurs acceptables sont SevenBit et International.|  
-|`deliveryMethod`|Spécifie la méthode de remise pour les messages électroniques. Les valeurs acceptables sont network, pickupDirectoryFromIis et specifiedPickupDirectory.|  
+|`deliveryMethod`|Spécifie la méthode de remise pour les messages électroniques. Les valeurs acceptables sont network, pickupDirectoryFromIis et SpecifiedPickupDirectory.|  
 |`from`|Spécifie l’adresse d’origine de messages électroniques sortants.|  
   
 ### <a name="child-elements"></a>Éléments enfants  
@@ -71,7 +73,7 @@ Configure le format de remise, de la méthode de remise et à partir de l’adre
 |[\<mailSettings>, élément (paramètres réseau)](../../../../../docs/framework/configure-apps/file-schema/network/mailsettings-element-network-settings.md)|Configure les options d’envoi du courrier.|  
   
 ## <a name="example"></a>Exemple  
- L’exemple suivant spécifie les paramètres SMTP appropriés pour envoyer des messages électroniques en utilisant les informations d’identification de réseau par défaut.  
+ L’exemple suivant spécifie les paramètres SMTP appropriés pour envoyer un courrier électronique à l’aide des informations d’identification de réseau par défaut.  
   
 ```xml  
 <configuration>  

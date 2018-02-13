@@ -5,23 +5,25 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
-caps.latest.revision: "7"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: c205aec714d06b5d2aaf2806867fe51ef508385e
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: f675f75d6dfd51b5259748316864048562ee0452
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="claims-based-identity-model"></a>Modèle d’identité basée sur les revendications
-Lorsque vous créez des applications qui prennent en charge les revendications, l'identité de l'utilisateur est représentée dans votre application comme un ensemble de revendications. Une revendication peut être le nom de l'utilisateur, une autre peut être une adresse de messagerie. L'idée est qu'un système d'identité externe soit configuré pour fournir à votre application tout ce qu'elle doit savoir à propos de l'utilisateur avec chaque demande effectuée, ainsi que l'assurance de chiffrement que les données d'identité que vous recevez proviennent d'une source approuvée.  
+Lorsque vous créez des applications qui prennent en charge les revendications, l'identité de l'utilisateur est représentée dans votre application comme un ensemble de revendications. Une revendication peut être le nom d’utilisateur, une autre peut être une adresse de messagerie. L'idée est qu'un système d'identité externe soit configuré pour fournir à votre application tout ce qu'elle doit savoir à propos de l'utilisateur avec chaque demande effectuée, ainsi que l'assurance de chiffrement que les données d'identité que vous recevez proviennent d'une source approuvée.  
   
  Dans ce modèle, une authentification unique est beaucoup plus facile à effectuer, et votre application n'est plus responsable des opérations suivantes :  
   
@@ -49,7 +51,7 @@ Lorsque vous créez des applications qui prennent en charge les revendications, 
  Pour les besoins de description du modèle de programmation dans Windows Identity Foundation (WIF), nous utiliserons le terme « identité » pour représenter un jeu d’attributs qui décrit un utilisateur ou une autre entité dans un système à sécuriser.  
   
 ### <a name="claim"></a>Revendication  
- Imaginez une revendication comme une partie des informations d'identité (comme le nom, l'adresse de messagerie, l'âge, l'appartenance au rôle sales). Plus votre application reçoit de revendications, plus vous en savez sur l'utilisateur. Vous vous demandez peut-être pourquoi le terme « revendications » est employé plutôt que « attributs », qui est souvent utilisé pour décrire des annuaires d’entreprise. La raison est liée à la méthode de remise. Dans ce modèle, votre application ne recherche pas les attributs utilisateur dans un répertoire. En revanche, l'utilisateur fournit des revendications à votre application, et que celle-ci les examine. Chaque revendication est faite par un émetteur, et vous devez approuver la revendication autant que vous approuvez l'émetteur. Par exemple, vous devez faire confiance à une revendication faite par le contrôleur de domaine de votre société plus que celle faite par l'utilisateur lui-même. WIF représente les revendications avec un type <xref:System.Security.Claims.Claim>, qui possède une propriété <xref:System.Security.Claims.Claim.Issuer%2A> qui vous permet de savoir qui a publié la revendication.  
+ Imaginez une revendication comme une partie des informations d’identité tels que nom, adresse de messagerie, âge, l’appartenance au rôle Sales. Plus votre application reçoit de revendications, plus vous en savez sur l'utilisateur. Vous vous demandez peut-être pourquoi le terme « revendications » est employé plutôt que « attributs », qui est souvent utilisé pour décrire des annuaires d’entreprise. La raison est liée à la méthode de remise. Dans ce modèle, votre application ne recherche pas les attributs utilisateur dans un répertoire. En revanche, l'utilisateur fournit des revendications à votre application, et que celle-ci les examine. Chaque revendication est faite par un émetteur, et vous devez approuver la revendication autant que vous approuvez l'émetteur. Par exemple, vous devez faire confiance à une revendication faite par le contrôleur de domaine de votre société plus que celle faite par l'utilisateur lui-même. WIF représente les revendications avec un type <xref:System.Security.Claims.Claim>, qui possède une propriété <xref:System.Security.Claims.Claim.Issuer%2A> qui vous permet de savoir qui a publié la revendication.  
   
 ### <a name="security-token"></a>Jeton de sécurité  
  L'utilisateur fournit un ensemble de revendications à votre application avec une demande. Dans un service Web, ces revendications sont effectuées dans l'en-tête de sécurité de l'enveloppe SOAP. Dans une application Web basée sur un navigateur, les revendications passent par à une publication HTTP à partir du navigateur de l'utilisateur, et peuvent être mises en cache dans un cookie par la suite si une session est requise. Quelle que soit la façon dont ces revendications arrivent, elles doivent être sérialisées, c'est là que les jetons de sécurité entrent en action. Un jeton de sécurité est un ensemble sérialisé de revendications qui est signé numériquement par l'autorité de publication. La signature est importante : elle vous donne l'assurance que l'utilisateur n'a pas simplement effectué un ensemble de revendications et vous l'a envoyé. Lorsque la sécurité n'est pas une priorité et que le chiffrement n'est pas nécessaire ou souhaité, vous pouvez utiliser des jetons non signés, mais ce scénario n'est pas décrit dans cette rubrique.  

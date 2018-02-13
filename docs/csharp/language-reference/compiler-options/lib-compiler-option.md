@@ -2,30 +2,32 @@
 title: -lib (Options du compilateur C#)
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
-f1_keywords: /lib
+f1_keywords:
+- /lib
 helpviewer_keywords:
 - lib compiler option [C#]
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 476bc43987b5ac8fa222b767b068a9ca14537bc2
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: b60c6028d4b3f72acc31fe6028f7f956e1037eb0
+ms.sourcegitcommit: dd6ea7f0e581ac84e0a90d9b23c463fcf1ec3ce7
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/23/2018
 ---
-# <a name="lib-c-compiler-options"></a>/lib (Options du compilateur C#)
-L’option **/lib** spécifie l’emplacement des assemblys référencés au moyen de l’option [/reference (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
+# <a name="-lib-c-compiler-options"></a>-lib (Options du compilateur C#)
+L’option **-lib** spécifie l’emplacement des assemblys référencés au moyen de l’option [-reference (Options du compilateur C#)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md).  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```console  
-/lib:dir1[,dir2]  
+-lib:dir1[,dir2]  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -35,22 +37,22 @@ L’option **/lib** spécifie l’emplacement des assemblys référencés au moy
  `dir2`  
  Un ou plusieurs répertoires supplémentaires où rechercher des références d’assembly. Séparez les noms des répertoires supplémentaires par une virgule, sans espace.  
   
-## <a name="remarks"></a>Remarques  
+## <a name="remarks"></a>Notes  
  Le compilateur recherche les références d’assembly qui ne sont pas complètes dans l’ordre suivant :  
   
 1.  Répertoire de travail actuel. Il s’agit du répertoire à partir duquel le compilateur est appelé.  
   
 2.  Répertoire système du common language runtime.  
   
-3.  Répertoires spécifiés par **/lib**.  
+3.  Répertoires spécifiés par **-lib**.  
   
 4.  Répertoires spécifiés par la variable d’environnement LIB.  
   
- Utilisez **/reference** pour spécifier une référence d’assembly.  
+ Utilisez **-reference** pour spécifier une référence d’assembly.  
   
- **/lib** est additif. Si vous le spécifiez plusieurs fois, il effectue un ajout aux valeurs précédentes.  
+ **-lib** est additif. Si vous le spécifiez plusieurs fois, il effectue un ajout aux valeurs précédentes.  
   
- Au lieu d’utiliser **/lib**, vous pouvez copier dans le répertoire de travail les assemblys nécessaires. De cette façon, vous passez simplement le nom de l’assembly à **/reference**. Vous pouvez ensuite supprimer les assemblys du répertoire de travail. Comme le chemin de l’assembly dépendant n’est pas spécifié dans le manifeste de l’assembly, l’application peut être démarrée sur l’ordinateur cible, et recherche et utilise l’assembly dans le Global Assembly Cache.  
+ Au lieu d’utiliser **-lib**, vous pouvez copier dans le répertoire de travail les assemblys nécessaires. De cette façon, vous passez simplement le nom de l’assembly à **-reference**. Vous pouvez ensuite supprimer les assemblys du répertoire de travail. Comme le chemin de l’assembly dépendant n’est pas spécifié dans le manifeste de l’assembly, l’application peut être démarrée sur l’ordinateur cible, et recherche et utilise l’assembly dans le Global Assembly Cache.  
   
  Le fait que le compilateur puisse référencer l’assembly n’implique pas que le common language runtime soit en mesure de rechercher et charger l’assembly au moment de l’exécution. Consultez [Méthode de localisation des assemblys par le runtime](../../../framework/deployment/how-the-runtime-locates-assemblies.md) pour plus d’informations sur la façon dont le runtime recherche des assemblys référencés.  
   
@@ -68,7 +70,7 @@ L’option **/lib** spécifie l’emplacement des assemblys référencés au moy
  Compilez t2.cs pour créer un fichier .exe. Le compilateur recherche les références d’assembly dans le répertoire de travail et dans le répertoire racine du lecteur C.  
   
 ```console  
-csc /lib:c:\ /reference:t2.dll t2.cs  
+csc -lib:c:\ -reference:t2.dll t2.cs  
 ```  
   
 ## <a name="see-also"></a>Voir aussi  

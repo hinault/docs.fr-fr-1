@@ -9,15 +9,18 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7e74918c-bc72-4977-a49b-e1520a6d8f60
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: b899ae870fe92b31d7f4fcd088531f63694bd233
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 9e9f934d6bff2c9ff3733551bca89b43920f3104
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="load-data-from-a-reader"></a>Chargement de données à partir d'un lecteur
 Si un document XML est chargé à l'aide de la méthode <xref:System.Xml.XmlDocument.Load%2A> et d'un paramètre d'objet <xref:System.Xml.XmlReader>, il existe des différences entre le comportement qui se produit et celui du chargement de données d'autres formats. Si le lecteur est dans son état initial, <xref:System.Xml.XmlDocument.Load%2A> utilise l'ensemble du contenu du lecteur et crée le DOM (Document Object Model) XML à partir de toutes les données du lecteur.  
@@ -37,4 +40,4 @@ Si un document XML est chargé à l'aide de la méthode <xref:System.Xml.XmlDocu
  Par défaut, <xref:System.Xml.XmlDocument.Load%2A> ne vérifie pas si le XML est valide à l'aide de la définition de type de document (DTD) ou la validation de schéma. Il vérifie uniquement si le XML est correctement construit. Pour effectuer la validation, vous devez créer un objet <xref:System.Xml.XmlReader> à l'aide de la classe <xref:System.Xml.XmlReaderSettings>. La classe <xref:System.Xml.XmlReader> peut effectuer la validation à l'aide d'une DTD ou d'un schéma XSD (Schema definition language). La propriété <xref:System.Xml.ValidationType> de la classe <xref:System.Xml.XmlReaderSettings> détermine si l'instance de l'objet <xref:System.Xml.XmlReader> effectue la validation. Pour plus d'informations sur la validation des données XML, consultez la section Notes de la page de référence <xref:System.Xml.XmlReader>.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Document Object Model (DOM) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

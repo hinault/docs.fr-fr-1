@@ -13,23 +13,23 @@ ms.assetid: 141b003e-1ddb-4e1c-bcb2-e1c3870e6a51
 caps.latest.revision: "41"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: f5382b0050b81ed3bb1a075a042bdc4034a3975d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 6f7c80acdb3815af4b5d545297894778029a9104
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="constraints-on-type-parameters-c-programming-guide"></a>Contraintes sur les paramètres de type (Guide de programmation C#)
 Quand vous définissez une classe générique, vous pouvez appliquer des restrictions aux genres de types que le code client peut utiliser pour les arguments de type lorsqu’il instancie votre classe. Si le code client essaie d’instancier votre classe à l’aide d’un type qui n’est pas autorisé par une contrainte, il en résulte une erreur de compilation. Ces restrictions sont appelées des contraintes. Les contraintes sont spécifiées à l’aide du mot clé contextuel `where`. Le tableau suivant liste les six types de contraintes :  
   
 |Contrainte|Description|  
 |----------------|-----------------|  
-|where T : struct|L’argument de type doit être un type valeur. Tout type valeur, excepté <xref:System.Nullable>, peut être spécifié. Consultez [Utilisation de types Nullable](../../../csharp/programming-guide/nullable-types/using-nullable-types.md) pour plus d’informations.|  
-|where T : class|L’argument de type doit être un type référence. Cela s’applique également à tout type de classe, d’interface, de délégué ou de tableau.|  
-|where T : new()|L’argument de type doit avoir un constructeur sans paramètre public. Quand vous utilisez la contrainte `new()` avec d’autres contraintes, elle doit être spécifiée en dernier.|  
-|where T : \<nom de classe de base>|L’argument de type doit être la classe de base spécifiée ou en dériver.|  
-|where T : \<nom d’interface>|L’argument de type doit être ou implémenter l’interface spécifiée. Plusieurs contraintes d’interface peuvent être spécifiées. L’interface qui impose les contraintes peut également être générique.|  
-|where T : U|L’argument de type fourni pour T doit être l’argument fourni pour U ou en dériver.|  
+|`where T: struct`|L’argument de type doit être un type valeur. Tout type valeur, excepté <xref:System.Nullable>, peut être spécifié. Consultez [Utilisation de types Nullable](../../../csharp/programming-guide/nullable-types/using-nullable-types.md) pour plus d’informations.|  
+|`where T : class`|L’argument de type doit être un type référence. Cela s’applique également à tout type de classe, d’interface, de délégué ou de tableau.|  
+|`where T : new()`|L’argument de type doit avoir un constructeur sans paramètre public. Quand vous utilisez la contrainte `new()` avec d’autres contraintes, elle doit être spécifiée en dernier.|  
+|`where T : `*\<nom_classe_de_base>*|L’argument de type doit être la classe de base spécifiée ou en dériver.|  
+|`where T : `*\<nom_interface>*|L’argument de type doit être ou implémenter l’interface spécifiée. Plusieurs contraintes d’interface peuvent être spécifiées. L’interface qui impose les contraintes peut également être générique.|  
+|`where T : U`|L’argument de type fourni pour T doit être l’argument fourni pour U ou en dériver.|  
   
 ## <a name="why-use-constraints"></a>Pourquoi utiliser des contraintes ?  
  Si vous souhaitez examiner un élément dans une liste générique afin de déterminer s’il est valide ou de le comparer à un autre élément, le compilateur doit avoir une certaine garantie que l’opérateur ou la méthode qu’il doit appeler par tous les arguments de type pouvant être spécifiés par le code client est pris en charge. Cette garantie est obtenue en appliquant une ou plusieurs contraintes à votre définition de classe générique. Par exemple, la contrainte de classe de base indique au compilateur que seuls les objets de ce type ou dérivés de ce type seront utilisés comme arguments de type. Une fois que le compilateur a cette garantie, il peut autoriser les méthodes de ce type à être appelées dans la classe générique. Les contraintes sont appliquées à l’aide du mot clé contextuel `where`. L’exemple de code suivant illustre la fonctionnalité que nous pouvons ajouter à la classe `GenericList<T>` (dans [Introduction aux génériques](../../../csharp/programming-guide/generics/introduction-to-generics.md)) en appliquant une contrainte de classe de base.  

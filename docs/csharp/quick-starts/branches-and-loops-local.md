@@ -1,25 +1,25 @@
 ---
 title: "Démarrage rapide - Branches et boucles - Guide C#"
-description: "Dans ce démarrage rapide sur les branches et les boucles, vous écrivez du code en C# pour explorer la syntaxe de langage qui prend en charge les branches et boucles conditionnelles pour exécuter des instructions de manière répétée."
+description: "Dans ce guide de démarrage rapide sur les branches et les boucles, vous écrivez du code en C# pour explorer la syntaxe de langage qui prend en charge les branches et boucles conditionnelles pour exécuter des instructions de manière répétée."
 author: billwagner
 ms.author: wiwagn
 ms.date: 10/31/2017
-ms.topic: article
+ms.topic: get-started-article
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 7954475616b122f8bb96ad00d05b476b3beeb52c
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: 609c8625b19025a20c1da1e767870eafbab4c4a0
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="branches-and-loops"></a>Branches et boucles
 
-Ce démarrage rapide vous explique comment écrire un code qui examine des variables et modifie un chemin d’exécution en fonction de ces variables. Vous allez écrire un code en C# et afficher les résultats de la compilation et de l’exécution du code. Le démarrage rapide contient une série de leçons pour explorer la création de branches et de boucles en C#. Ces leçons présentent les concepts de base du langage C#.
+Ce guide de démarrage rapide vous explique comment écrire un code qui examine des variables et modifie un chemin d’exécution en fonction de ces variables. Vous allez écrire un code en C# et afficher les résultats de la compilation et de l’exécution du code. Le guide de démarrage rapide contient une série de leçons pour explorer la création de branches et de boucles en C#. Ces leçons présentent les concepts de base du langage C#.
 
-Ce démarrage rapide suppose que vous disposez d’un ordinateur que vous pouvez utiliser pour le développement. La rubrique .NET [Bien démarrer en 10 minutes](https://www.microsoft.com/net/core) contient des instructions pour configurer votre environnement de développement local sur Mac, PC ou Linux. Une brève vue d’ensemble des commandes que vous utiliserez est disponible dans la [présentation des démarrages rapides locaux](local-environment.md) avec des liens pour plus d’informations.
+Ce guide de démarrage rapide suppose que vous disposez d’un ordinateur que vous pouvez utiliser pour le développement. La rubrique .NET [Bien démarrer en 10 minutes](https://www.microsoft.com/net/core) contient des instructions pour configurer votre environnement de développement local sur Mac, PC ou Linux. Une brève vue d’ensemble des commandes que vous utiliserez est disponible dans la [présentation des guides de démarrage rapide locaux](local-environment.md) avec des liens pour plus d’informations.
 
 ## <a name="make-decisions-using-the-if-statement"></a>Prendre des décisions à l’aide de l’instruction `if`
 
@@ -69,7 +69,7 @@ L’instruction qui suit le mot clé `else` s’exécute uniquement quand la con
 
 > [!IMPORTANT]
 > La mise en retrait sous les instructions `if` et `else` a simplement pour but de faciliter la lecture.
-> Le langage C# ne considère pas la mise en retrait ou les espaces blancs comme des éléments significatifs. L’instruction qui suit le mot clé `if` ou `else` sera exécutée en fonction de la condition. Tous les exemples de ce démarrage rapide suivent une pratique courante pour mettre en retrait les lignes en fonction du flux de contrôle des instructions.
+> Le langage C# ne considère pas la mise en retrait ou les espaces blancs comme des éléments significatifs. L’instruction qui suit le mot clé `if` ou `else` sera exécutée en fonction de la condition. Tous les exemples de ce guide de démarrage rapide suivent une pratique courante pour mettre en retrait les lignes en fonction du flux de contrôle des instructions.
 
 Étant donné que la mise en retrait n’est pas significative, vous devez utiliser `{` et `}` pour indiquer quand vous souhaitez inclure plus d’une instruction dans le bloc qui s’exécute de manière conditionnelle. Les programmeurs C# utilisent généralement les accolades pour toutes les clauses `if` et `else`. L’exemple suivant est identique à celui que vous venez de créer. Modifiez votre code ci-dessus pour qu’il corresponde au code suivant :
 
@@ -87,7 +87,7 @@ else
 ```
 
 > [!TIP]
-> Dans le reste de ce démarrage rapide, tous les exemples de code incluent les accolades, conformément aux pratiques acceptées.
+> Dans le reste de ce guide de démarrage rapide, tous les exemples de code incluent les accolades, conformément aux pratiques acceptées.
 
 Vous pouvez tester des conditions plus complexes. Ajoutez le code suivant à votre méthode `Main` après le code que vous avez écrit jusque-là :
 
@@ -252,9 +252,9 @@ Maintenant que vous avez vu l’instruction `if` et la création de boucles en l
 
 Essayez par vous-même et vérifiez le résultat. Vous devriez obtenir 63 comme réponse. Vous pouvez voir une réponse possible en [consultant le code terminé sur GitHub](https://github.com/dotnet/docs/tree/master/samples/csharp/branches-quickstart/Program.cs#L46-L54).
 
-Vous avez terminé le démarrage rapide « Branches et boucles ».
+Vous avez terminé le guide de démarrage rapide « Branches et boucles ».
 
-Vous pouvez passer au démarrage rapide [Tableaux et collections](arrays-and-collections.md) dans votre propre environnement de développement.
+Vous pouvez passer au démarrage rapide [Chaînes interpolées](interpolated-strings-local.md) dans votre propre environnement de développement.
 
 Pour en savoir plus sur ces concepts, consultez les rubriques suivantes :
 

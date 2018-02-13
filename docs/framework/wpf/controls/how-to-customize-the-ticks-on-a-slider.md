@@ -17,11 +17,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 610fa829b4d2c49d0c3ae760f5601610bd2a0c46
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: d21d2950ed228bf588a202419c222ee86dde5b0d
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>Comment : personnaliser les graduations sur un curseur
 Cet exemple montre comment créer un <xref:System.Windows.Controls.Slider> contrôle qui a des graduations.  
@@ -39,4 +39,4 @@ Cet exemple montre comment créer un <xref:System.Windows.Controls.Slider> contr
  <xref:System.Windows.Controls.Slider>  
  <xref:System.Windows.Controls.Primitives.TickBar>  
  <xref:System.Windows.Controls.Slider.TickPlacement%2A>  
- [Rubriques Comment](http://msdn.microsoft.com/en-us/534be86c-afb2-425d-8186-631278a9925e)
+ [Rubriques Comment](http://msdn.microsoft.com/library/534be86c-afb2-425d-8186-631278a9925e)

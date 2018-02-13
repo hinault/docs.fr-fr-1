@@ -11,27 +11,27 @@ helpviewer_keywords:
 - -refout compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: dc78165fc8f273948111c174ae0bf0af6591a8ab
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: fbae6f461304c37ba2ef10da16b5d520377bb225
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refout-c-compiler-options"></a>/refout (C# Options du compilateur)
+# <a name="-refout-c-compiler-options"></a>-refout (Options du compilateur C#)
 
-L’option **/refout** spécifie un chemin de fichier où l’assembly de référence doit être généré. Cela se traduit par `metadataPeStream` dans l’API Emit.
+L’option **-refout** spécifie un chemin de fichier où l’assembly de référence doit être généré. Cela se traduit par `metadataPeStream` dans l’API Emit.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```console
-/refout:filepath
+-refout:filepath
 ```
 
 ## <a name="arguments"></a>Arguments
 
  `filepath` Chemin de l’assembly de référence. Il doit généralement correspondre à celui de l’assembly principal. La convention recommandée (utilisée par MSBuild) consiste à placer l’assembly de référence dans un sous-dossier « ref/ » par rapport à l’assembly principal.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Les assemblys de métadonnées uniquement ont leurs corps de méthode remplacés par un corps `throw null` unique, mais incluent tous les membres à l’exception des types anonymes. L’utilisation de corps `throw null` (plutôt qu’aucun corps) permet la bonne exécution de PEVerify (et, par voie de conséquence, la validation de la conformité des métadonnées).
 
@@ -45,7 +45,7 @@ En outre, les assemblys de référence suppriment les métadonnées (membres pri
 - Toutes les méthodes virtuelles sont conservées. Les implémentations d’interface explicite sont conservées. Les propriétés et les événements implémentés explicitement sont conservés, car leurs accesseurs sont virtuels (et donc conservés).
 - Tous les champs d’un struct sont conservés. (Candidat pour une optimisation future de C# 7.1)
 
-Les options `/refout` et [`/refonly`](refonly-compiler-option.md) s’excluent mutuellement.
+Les options `-refout` et [`-refonly`](refonly-compiler-option.md) s’excluent mutuellement.
 
 ## <a name="see-also"></a>Voir aussi
  [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  

@@ -41,15 +41,18 @@ helpviewer_keywords:
 - integer value type
 - base types, class library
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: 05af1b2a881cabb418adcaaee44a819ae323e62a
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 607ef0020e15581c6ccca8f232eaea6be547f63b
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="net-framework-class-library-overview"></a>Vue d'ensemble de la bibliothèque de classes .NET Framework
 Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] inclut des classes, interfaces et types valeur qui permettent d'accélérer et d'optimiser le processus de développement et de fournir l'accès aux fonctions du système. Pour faciliter l'interopérabilité entre les langages, la plupart des types .NET Framework sont conformes CLS (Common Language Specification) et peuvent, par conséquent, être utilisés à partir de n'importe quel langage de programmation dont le compilateur est conforme CLS.  
@@ -79,7 +82,7 @@ Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] inclut des classes,
   
  Par exemple, l'espace de noms Microsoft.Word est conforme à cette indication.  
   
- L'utilisation de modèles d'affectation de noms pour regrouper des types associés en espaces de noms est très utile pour générer et documenter les bibliothèques de classes. Cependant, ce schéma d'affectation de noms n'a pas d'effet sur la visibilité, l'accès aux membres, l'héritage, la sécurité ou la liaison. Un espace de noms peut être partitionné en plusieurs assemblys et un seul assembly peut contenir des types provenant de plusieurs espaces de noms. L'assembly fournit la structure formelle pour le versioning, le déploiement, la sécurité, le chargement et la visibilité dans le Common Language Runtime.  
+ L’utilisation de modèles d’affectation de noms pour regrouper des types associés en espaces de noms est très utile pour générer et documenter les bibliothèques de classes. Cependant, ce schéma d’affectation de noms n’a pas d’effet sur la visibilité, l’accès aux membres, l’héritage, la sécurité ou la liaison. Un espace de noms peut être partitionné en plusieurs assemblys et un seul assembly peut contenir des types provenant de plusieurs espaces de noms. L'assembly fournit la structure formelle pour le versioning, le déploiement, la sécurité, le chargement et la visibilité dans le Common Language Runtime.  
   
  Pour plus d’informations sur les espaces de noms et les noms des types, consultez [Système de type commun (CTS, Common Type System)](../../docs/standard/base-types/common-type-system.md).  
   
@@ -88,15 +91,15 @@ Le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] inclut des classes,
   
  Le tableau suivant énumère les types de base fournis par le [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], décrit brièvement chaque type et indique le type correspondant en Visual Basic, C#, C++ et JScript.  
   
-|Catégorie|Nom de classe|Description|Type de données Visual Basic|Type de données C#|Type de données C++|Type de données JScript|  
+|Category|Nom de classe|Description|Type de données Visual Basic|Type de données C#|Type de données C++|Type de données JScript|  
 |--------------|----------------|-----------------|----------------------------|-------------------|---------------------|-----------------------|  
 |Entier|<xref:System.Byte>|Entier non signé 8 bits.|**Byte**|**byte**|**unsigned char**|**Byte**|  
-||<xref:System.SByte>|Entier signé 8 bits.<br /><br /> Non conforme CLS.|**SByte**|**sbyte**|**char**<br /><br /> ou<br /><br /> **signed** **char**|**SByte**|  
+||<xref:System.SByte>|Entier signé 8 bits.<br /><br /> Non conforme CLS.|**SByte**|**sbyte**|**char**<br /><br /> - ou -<br /><br /> **signed** **char**|**SByte**|  
 ||<xref:System.Int16>|Entier signé 16 bits.|**short**|**short**|**short**|**short**|  
-||<xref:System.Int32>|Entier signé 32 bits.|**Integer**|**int**|**int**<br /><br /> ou<br /><br /> **long**|**int**|  
+||<xref:System.Int32>|Entier signé 32 bits.|**Integer**|**int**|**int**<br /><br /> - ou -<br /><br /> **long**|**int**|  
 ||<xref:System.Int64>|Entier signé 64 bits.|**Long**|**long**|**__int64**|**long**|  
 ||<xref:System.UInt16>|Entier non signé 16 bits.<br /><br /> Non conforme CLS.|**UShort**|**ushort**|**unsigned short**|**UInt16**|  
-||<xref:System.UInt32>|Entier 32 bits non signé.<br /><br /> Non conforme CLS.|**UInteger**|**uint**|**unsigned int**<br /><br /> ou<br /><br /> **unsigned long**|**UInt32**|  
+||<xref:System.UInt32>|Entier non signé 32 bits.<br /><br /> Non conforme CLS.|**UInteger**|**uint**|**unsigned int**<br /><br /> - ou -<br /><br /> **unsigned long**|**UInt32**|  
 ||<xref:System.UInt64>|Entier 64 bits non signé.<br /><br /> Non conforme CLS.|**ULong**|**ulong**|**unsigned __int64**|**UInt64**|  
 |Virgule flottante|<xref:System.Single>|Nombre à virgule flottante (32 bits) simple précision.|**Single**|**float**|**float**|**float**|  
 ||<xref:System.Double>|Nombre à virgule flottante (64 bits) double précision.|**Double**|**double**|**double**|**double**|  

@@ -9,18 +9,21 @@ ms.technology: dotnet-standard
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.openlocfilehash: 00b923edb95852d9434db1b393df68fd9d0c8a1a
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.workload:
+- dotnet
+- dotnetcore
+ms.openlocfilehash: 72039faef3bcde4db830d110938266c63689219e
+ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 12/23/2017
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>Modification de nœuds, de contenu et de valeurs dans un document XML
-Il existe plusieurs façons de modifier les nœuds et le contenu d'un document. Vous pouvez :  
+Il existe plusieurs façons de modifier les nœuds et le contenu d'un document. Vous pouvez :  
   
 -   Modifier la valeur des nœuds à l'aide de la propriété <xref:System.Xml.XmlNode.Value%2A>.  
   
@@ -54,4 +57,4 @@ Il existe plusieurs façons de modifier les nœuds et le contenu d'un document. 
  L'ajout ou la suppression d'un enfant en lecture seule d'un nœud modifiable est une opération valide. Cependant, toute tentative de modification de ce nœud en lecture seule à proprement parler lève un objet <xref:System.InvalidOperationException>. C'est le cas, par exemple, lorsque vous modifiez les enfants du nœud <xref:System.Xml.XmlEntityReference>. Ces enfants sont en lecture seule et ne peuvent donc pas être modifiés. Si vous tentez de les modifier, un objet <xref:System.InvalidOperationException> est levé.  
   
 ## <a name="see-also"></a>Voir aussi  
- [Document Object Model (DOM) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)
+ [DOM (Document Object Model) XML](../../../../docs/standard/data/xml/xml-document-object-model-dom.md)

@@ -10,11 +10,11 @@ ms.prod: .net
 ms.technology: devlang-fsharp
 ms.devlang: fsharp
 ms.assetid: 16e2a011-c785-48c8-859f-79df7f3a0e29
-ms.openlocfilehash: a374f521bcde7506bb3a9eebb627eaffcd8b94a7
-ms.sourcegitcommit: bd1ef61f4bb794b25383d3d72e71041a5ced172e
+ms.openlocfilehash: b7a02512ce4a63885e771be56f106bc66cc2743e
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/18/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="discriminated-unions"></a>Unions discriminées
 
@@ -30,7 +30,7 @@ type type-name =
 ...
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 Les unions discriminées sont semblables aux types union dans d’autres langages, mais il existe des différences. Comme avec un type union en C++ ou un type variant en Visual Basic, les données stockées dans la valeur ne sont pas fixe ; Il peut être une des options distinctes. Contrairement aux unions de ces autres langages, toutefois, chacune des options possibles reçoit un *identificateur de cas*. Les identificateurs de cas sont des noms pour les différents types de valeurs susceptibles d’entraîner des objets de ce type ; les valeurs sont facultatives. Si les valeurs ne sont pas présents, le cas est équivalent à un cas d’énumération. Si les valeurs sont présentes, chaque valeur peut être une valeur unique d’un type spécifié, ou un tuple qui regroupe plusieurs champs des mêmes ou de types différents. À compter de F # 3.1, vous pouvez nommer un champ individuel, mais le nom est facultatif, même si d’autres champs dans la même casse sont nommés.
 
 Par exemple, considérez la déclaration suivante d’un type de forme.
@@ -113,9 +113,9 @@ type SingleCase = Case of string
 
 [<Struct>]
 type Multicase =
-    | Case1 of string
-    | Case2 of int
-    | Case3 of double
+    | Case1 of Case1 : string
+    | Case2 of Case2 : int
+    | Case3 of Case3 : double
 ```
 
 Étant donné que ceux-ci sont des types valeur et les types de référence pas, il existe supplémentaire unions discriminées de considérations par rapport à la référence :

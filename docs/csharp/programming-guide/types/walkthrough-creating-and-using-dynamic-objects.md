@@ -2,7 +2,8 @@
 title: "Procédure pas à pas : création et utilisation d'objets dynamiques (C# et Visual Basic)"
 ms.date: 07/20/2015
 ms.prod: .net
-ms.technology: devlang-csharp
+ms.technology:
+- devlang-csharp
 ms.topic: article
 dev_langs:
 - csharp
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: ab1e245ed806cf0ea6346c76c6ade83273eed7be
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: eca6da96d3bf9c5c25216e442999be77a332b5c9
+ms.sourcegitcommit: 70dcc89737127e4d5f20500242409b687e51b07e
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/11/2018
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>Procédure pas à pas : création et utilisation d'objets dynamiques (C# et Visual Basic)
 
@@ -37,8 +38,8 @@ Les objets dynamiques exposent des membres tels que les propriétés et les mét
   
 -   Créer un projet qui utilise une bibliothèque `IronPython`.  
   
-## <a name="prerequisites"></a>Conditions préalables  
-Vous devez [IronPython](http://ironpython.net/) pour .NET effectuer cette procédure pas à pas. Accédez à leurs [page de téléchargement](http://ironpython.net/download/) pour obtenir la version la plus récente.
+## <a name="prerequisites"></a>Prérequis  
+Pour effectuer cette procédure pas à pas, vous devez utiliser [IronPython](http://ironpython.net/) pour .NET. Accédez à la [page de téléchargement](http://ironpython.net/download/) pour obtenir la version la plus récente.
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
@@ -178,4 +179,4 @@ Le projet suivant que vous créez dans cette procédure pas à pas permet d’ac
  [Utilisation du type dynamic](../../../csharp/programming-guide/types/using-type-dynamic.md)  
  [Liaison anticipée et liaison tardive](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)  
  [dynamic](../../../csharp/language-reference/keywords/dynamic.md)  
- [Implémentation des interfaces dynamiques (blog externe)](http://go.microsoft.com/fwlink/?LinkId=230895)
+ [Implémentation des interfaces dynamiques (PDF téléchargeable à partir de Microsoft TechNet)](http://download.microsoft.com/download/5/4/B/54B83DFE-D7AA-4155-9687-B0CF58FF65D7/implementing-dynamic-interfaces.pdf)

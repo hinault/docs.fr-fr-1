@@ -8,25 +8,26 @@ f1_keywords: /refonly
 helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
+- refonly compiler option [C#]
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c4c745416bda56f5f1b1b4ab8267274d972a990d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 25b0f6e024e194dff641fd5069755d0ea112a50b
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refonly-c-compiler-options"></a>/refonly (Options du compilateur C# Compiler)
+# <a name="-refonly-c-compiler-options"></a>-refonly (Options du compilateur C#)
 
-Le **/refonly** option indique qu’un assembly de référence doit être générée au lieu d’un assembly de l’implémentation, comme la sortie principale. Le paramètre `/refonly` désactive sans assistance la génération de fichiers PDB, car les assemblys de référence ne peuvent pas être exécutés.
+L’option **-refonly** indique qu’un assembly de référence doit être généré à la place d’un assembly d’implémentation, en tant que sortie principale. Le paramètre `-refonly` désactive sans assistance la génération de fichiers PDB, car les assemblys de référence ne peuvent pas être exécutés.
 
 ## <a name="syntax"></a>Syntaxe
 
 ```console
-/refonly
+-refonly
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Les assemblys de métadonnées uniquement ont leurs corps de méthode remplacés par un corps `throw null` unique, mais incluent tous les membres à l’exception des types anonymes. L’utilisation de corps `throw null` (plutôt qu’aucun corps) permet la bonne exécution de PEVerify (et, par voie de conséquence, la validation de la conformité des métadonnées).
 
@@ -40,7 +41,7 @@ En outre, les assemblys de référence suppriment les métadonnées (membres pri
 - Toutes les méthodes virtuelles sont conservées. Les implémentations d’interface explicite sont conservées. Les propriétés et les événements implémentés explicitement sont conservés, car leurs accesseurs sont virtuels (et donc conservés).
 - Tous les champs d’un struct sont conservés. (Candidat pour une optimisation future de C# 7.1)
 
-Les options `/refonly` et [`/refout`](refout-compiler-option.md) s’excluent mutuellement.
+Les options `-refonly` et [`-refout`](refout-compiler-option.md) s’excluent mutuellement.
 
 ## <a name="see-also"></a>Voir aussi
  [Options du compilateur C#](../../../csharp/language-reference/compiler-options/index.md)  

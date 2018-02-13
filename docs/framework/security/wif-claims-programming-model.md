@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: BrucePerlerMS
 ms.author: bruceper
 manager: mbaldwin
-ms.workload: dotnet
-ms.openlocfilehash: 6d7059c5209dc95ce68f28e0f32db929e7c97271
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 1bd84e6a1e6fb0d4808dca42af2e2916be1133a3
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="wif-claims-programming-model"></a>Modèle de programmation de revendications WIF
 Les développeurs ASP.NET et WCF (Windows Communication Foundation) utilisent généralement les interfaces IIdentity et IPrincipal pour traiter les informations d’identité de l’utilisateur. Dans .NET 4.5, WIF (Windows Identity Foundation) a été intégré pour que les revendications soient maintenant toujours présentes pour tous les principaux, comme illustré dans le diagramme suivant :  
@@ -29,9 +31,9 @@ Les développeurs ASP.NET et WCF (Windows Communication Foundation) utilisent g�
   
  Une revendication est représentée par la classe <xref:System.Security.Claims.Claim>. Cette classe a les propriétés importantes suivantes :  
   
--   <xref:System.Security.Claims.Claim.Type%2A> représente le type de revendication et est généralement un URI. Par exemple, la revendication d’adresse e-mail est représentée sous la forme `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`.  
+-   <xref:System.Security.Claims.Claim.Type%2A> représente le type de revendication et est généralement un URI. Par exemple, la revendication d’adresse de messagerie est représentée en tant que `http://schemas.microsoft.com/ws/2008/06/identity/claims/email`.  
   
--   <xref:System.Security.Claims.Claim.Value%2A> contient la valeur de la revendication et est représenté sous forme de chaîne. Par exemple, la revendication d’adresse e-mail peut être représentée sous la forme « someone@contoso.com ».  
+-   <xref:System.Security.Claims.Claim.Value%2A> contient la valeur de la revendication et est représenté sous forme de chaîne. Par exemple, l’adresse de messagerie peut être représentée en tant que «someone@contoso.com».  
   
 -   <xref:System.Security.Claims.Claim.ValueType%2A> représente le type de la valeur de revendication et est généralement un URI. Par exemple, le type chaîne est représenté sous la forme `http://www.w3.org/2001/XMLSchema#string`. Le type valeur doit être un QName conforme au schéma XML. La valeur doit être au format `namespace#format` pour permettre à WIF de générer une valeur QName valide. Si l’espace de noms n’est pas défini correctement, le schéma du code XML généré ne pourra probablement pas être validé, car il n’y aura pas de fichier XSD publié pour cet espace de noms. Le type valeur par défaut est `http://www.w3.org/2001/XMLSchema#string`. Consultez [http://www.w3.org/2001/XMLSchema](http://go.microsoft.com/fwlink/?LinkId=209155) pour obtenir les types valeur connus que vous pouvez utiliser en toute sécurité.  
   

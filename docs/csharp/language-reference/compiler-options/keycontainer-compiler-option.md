@@ -13,33 +13,33 @@ ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
 caps.latest.revision: "17"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 0292ff38b1d03f5960a20858fbb9c42a6aff1f43
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 944a9b4dbbed76f388642d67be9518343f750de5
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="keycontainer-c-compiler-options"></a>/keycontainer (Options du compilateur C#)
+# <a name="-keycontainer-c-compiler-options"></a>-keycontainer (Options du compilateur C#)
 Spécifie le nom du conteneur de la clé de chiffrement.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```console  
-/keycontainer:string  
+-keycontainer:string  
 ```  
   
 ## <a name="arguments"></a>Arguments  
  `string`  
  Nom du conteneur de clé de nom fort.  
   
-## <a name="remarks"></a>Remarques  
- Quand l’option **/keycontainer** est utilisée, le compilateur crée un composant partageable en insérant une clé publique provenant du conteneur spécifié dans le manifeste d’assembly et en signant l’assembly final avec la clé privée. Pour générer un fichier de clé, tapez sn -k `file` sur la ligne de commande. sn -i installe la paire de clés dans un conteneur.  
+## <a name="remarks"></a>Notes  
+ Quand l’option **-keycontainer** est utilisée, le compilateur crée un composant partageable en insérant une clé publique provenant du conteneur spécifié dans le manifeste d’assembly et en signant l’assembly final avec la clé privée. Pour générer un fichier de clé, tapez sn -k `file` sur la ligne de commande. sn -i installe la paire de clés dans un conteneur.  
   
- Si vous compilez avec [/target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), le nom du fichier de clé est conservé dans le module et incorporé dans l’assembly quand vous compilez ce module dans un assembly avec [/addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
+ Si vous compilez avec [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md), le nom du fichier de clé est conservé dans le module et incorporé dans l’assembly quand vous compilez ce module dans un assembly avec [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md).  
   
  Vous pouvez également spécifier cette option comme attribut personnalisé (<xref:System.Reflection.AssemblyKeyNameAttribute?displayProperty=nameWithType>) dans le code source de n'importe quel module MSIL (Microsoft Intermediate Language).  
   
- Vous pouvez également passer vos informations de chiffrement au compilateur avec [/keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md). Utilisez [/delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) si vous voulez ajouter la clé publique au manifeste d’assembly, mais que vous voulez différer la signature de l’assembly tant qu’il n’a pas été testé.  
+ Vous pouvez également passer vos informations de chiffrement au compilateur avec [-keyfile](../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md). Utilisez [-delaysign](../../../csharp/language-reference/compiler-options/delaysign-compiler-option.md) si vous voulez ajouter la clé publique au manifeste d’assembly, mais que vous voulez différer la signature de l’assembly tant qu’il n’a pas été testé.  
   
  Pour plus d’informations, consultez [Création et utilisation d’assemblys avec nom fort](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) et [Différer la signature d’un assembly](../../../framework/app-domains/delay-sign-assembly.md).  
   

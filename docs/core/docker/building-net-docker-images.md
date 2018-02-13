@@ -12,12 +12,13 @@ ms.devlang: dotnet
 ms.assetid: 03c28597-7e73-46d6-a9c3-f9cb55642739
 ms.custom: mvc
 manager: wpickett
-ms.workload: dotnetcore
-ms.openlocfilehash: cb438957a6519cf503e5bcaf85f2bc82fa18a047
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.workload:
+- dotnetcore
+ms.openlocfilehash: 2b1a57fe264eda0a4d3186c7be8b0de01bd5f0a9
+ms.sourcegitcommit: c1904b0437605a90e5aa65b4abd7e048000e349d
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="building-docker-images-for-net-core-applications"></a>Création d’images Docker pour les applications .NET Core
 
@@ -86,9 +87,9 @@ Versions les plus récentes de chaque variante :
 
 ## <a name="samples-to-explore"></a>Exemples à explorer
 
-* [Cet exemple d’ASP.NET Core Docker](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp) montre un modèle des bonnes pratiques pour la création d’images Docker pour les applications ASP.NET Core pour la production. L’exemple s’applique aux conteneurs Linux et Windows.
+* [Cet exemple d’ASP.NET Core Docker](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp) montre un modèle des meilleures pratiques pour la création d’images Docker pour les applications ASP.NET Core pour la production. L’exemple s’applique aux conteneurs Linux et Windows.
 
-* Cet exemple de Docker .NET Core montre un modèle des bonnes pratiques pour la [création d’images Docker pour les applications .NET Core pour la production.](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod)
+* Cet exemple de Docker .NET Core montre un modèle des meilleures pratiques pour la [création d’images Docker pour les applications .NET Core pour la production.](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod)
 
 ## <a name="your-first-aspnet-core-docker-app"></a>Votre première application Docker ASP.NET Core
 
@@ -101,7 +102,7 @@ Il utilise la [fonctionnalité de build en plusieurs étapes Docker](https://doc
 * Générer l’exemple dans un conteneur selon l’image de base Docker de build ASP.NET Core **la plus grande** 
 * Copier le résultat de la build finale dans une image Docker basée sur l’image de base Docker de runtime ASP.NET Core **la plus petite**
 
-> [!Note]
+> [!NOTE]
 > L’image de build contient les outils requis pour créer des applications, contrairement à l’image de runtime.
 
 ### <a name="prerequisites"></a>Prérequis
@@ -174,7 +175,8 @@ docker build -t aspnetapp .
 docker run -it --rm -p 5000:80 --name aspnetcore_sample aspnetapp
 ```
 
-> [!Note] L’argument `docker run` '-p' mappe le port 5000 sur votre ordinateur local au port 80 dans le conteneur (la forme de mappage de port est `host:container`). Pour plus d’informations, consultez la référence [docker run](https://docs.docker.com/engine/reference/commandline/exec/) dans les paramètres de ligne de commande.
+> [!NOTE]
+> L’argument `docker run` '-p' mappe le port 5000 sur votre ordinateur local au port 80 dans le conteneur (la forme de mappage de port est `host:container`). Pour plus d’informations, consultez la référence [docker run](https://docs.docker.com/engine/reference/commandline/exec/) dans les paramètres de ligne de commande.
 
 Une fois que l’application démarre, accédez à **http://localhost:5000** dans votre navigateur web.
 
@@ -196,7 +198,7 @@ docker run -it --rm --name aspnetcore_sample aspnetapp
 * Exécutez `docker exec aspnetcore_sample ipconfig`.
 * Copiez l’adresse IP de conteneur et collez-la dans votre navigateur (par exemple, 172.29.245.43).
 
-> [!Note]
+> [!NOTE]
 > Docker exec prend en charge l’identification des conteneurs avec le nom ou le hachage. Dans notre exemple, le nom (aspnetcore_sample) est utilisé.
 
 Consultez l’exemple suivant illustrant comment obtenir l’adresse IP d’un conteneur Windows en cours d’exécution.
@@ -215,7 +217,7 @@ Ethernet adapter Ethernet:
    Default Gateway . . . . . . . . . : 172.29.240.1
 ```
 
-> [!Note]
+> [!NOTE]
 > Docker exec exécute une nouvelle commande dans un conteneur en cours d’exécution. Pour plus d’informations, consultez la [référence docker exec](https://docs.docker.com/engine/reference/commandline/exec/) dans les paramètres de ligne de commande.
 
 Vous pouvez générer une application qui est prête à être déployée en production localement à l’aide de la commande [dotnet publish](../tools/dotnet-publish.md).
@@ -224,7 +226,7 @@ Vous pouvez générer une application qui est prête à être déployée en prod
 dotnet publish -c release -o published
 ```
 
-> [!Note]
+> [!NOTE]
 > L’argument -c release génère l’application en mode mise en production (la valeur par défaut est le mode débogage). Pour plus d’informations, consultez la [référence dotnet run](../tools/dotnet-run.md) dans les paramètres de ligne de commande.
 
 Vous pouvez exécuter l’application sur **Windows** à l’aide de la commande suivante.
@@ -265,5 +267,5 @@ Voici quelques étapes suivantes que vous pouvez effectuer :
 * [Prise en main de Visual Studio pour Mac, les conteneurs et le code serverless dans le cloud](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments)
 * [Bien démarrer avec Docker et Visual Studio pour Mac Lab](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started)
 
-> [!Note]
+> [!NOTE]
 > Si vous ne disposez pas d’abonnement Azure, [inscrivez-vous dès aujourd'hui](https://azure.microsoft.com/free/?b=16.48) pour obtenir un compte gratuit pendant 30 jours et 200 dollars US en crédits Azure pour essayer une combinaison quelconque de services Azure.

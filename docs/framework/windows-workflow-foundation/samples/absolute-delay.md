@@ -8,16 +8,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b483139a-39bb-4560-8003-8969a8fc2cd1
-caps.latest.revision: "3"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: f6974c7bb281aa6685725b65edd06bb40a907559
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 60e3b65851dba68b4d01d6e4195b5faf99b583de
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="absolute-delay"></a>Report absolu
 Le principal scénario de cet exemple consiste à définir un report jusqu'à un <xref:System.DateTime> spécifié, à l'aide de minuteurs durables dans une application de workflow. Cette opération n'est pas comparable à l'utilisation de l'activité <xref:System.Activities.Statements.Delay> intégrée, dans la mesure où elle vous permet seulement de définir un report pour un <xref:System.TimeSpan> donné (ou nombre de minutes/secondes).  
@@ -49,7 +50,7 @@ Le principal scénario de cet exemple consiste à définir un report jusqu'à un
   
  Cet exemple montre également comment activer la persistance pour un <xref:System.Activities.WorkflowApplication>. Dans cet exemple particulier, nous allons utiliser des minuteurs durables dans lesquels les données du flux de travail sont déchargées dans la base de données de persistance au cours de la période d'inactivité en attente de l'expiration du minuteur. Cette implémentation peut également servir à d'autres actions de persistance. Cet exemple montre comment configurer la chaîne de connexion de persistance avec SQL Server, et comment créer le magasin d'instances afin de rendre les données persistantes pour les instances du flux de travail. Une logique est fournie sur la manière de reprendre le flux de travail une fois qu'un événement rendant l'instance du flux de travail exécutable est généré.  
   
- Pendant l'exécution de cet exemple, vous pouvez noter l'heure de début et de fin du report intégré, à l'issue duquel un message électronique est envoyé. À partir de là, l'activité AbsoluteDelay s'arrête jusqu'à un <xref:System.DateTime> spécifié (ou 0 seconde si <xref:System.DateTime> est arrivé à expiration), suite à quoi un message électronique est envoyé à l'expiration. Cet exemple montre les deux cas d'utilisation différents de la fonctionnalité <xref:System.Activities.Statements.Delay> intégrée par rapport à l'utilisation d'une activité AbsoluteDelay.  
+ À mesure que vous parcourez cet exemple, vous verrez le temps dans laquelle le délai intégré commence et termine, qui à son tour entraîne un message électronique à envoyer. À partir de là, l'activité AbsoluteDelay s'arrête jusqu'à un <xref:System.DateTime> spécifié (ou 0 seconde si <xref:System.DateTime> est arrivé à expiration), suite à quoi un message électronique est envoyé à l'expiration. Cet exemple montre les deux cas d'utilisation différents de la fonctionnalité <xref:System.Activities.Statements.Delay> intégrée par rapport à l'utilisation d'une activité AbsoluteDelay.  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>Pour configurer, générer et exécuter l'exemple  
   

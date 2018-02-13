@@ -15,11 +15,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d28f55ddd550e95d9859258d89b4910cf320e3cd
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: bac21a0c9535326becfe94610db33869da89c471
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-configure-client-application-services"></a>Comment : configurer les services d'application cliente
 Cette rubrique décrit comment utiliser le [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] **Concepteur de projet** pour activer et configurer les services d’application cliente. Vous pouvez utiliser les services d'application cliente pour valider des utilisateurs et extraire des rôles d'utilisateur ainsi que des paramètres d'un service d'application [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] existant. Une fois la configuration effectuée, vous pouvez accéder aux services actifs dans votre code d’application comme décrit dans [Vue d’ensemble des services d’application cliente](../../../docs/framework/common-client-technologies/client-application-services-overview.md). Pour plus d’informations sur les services d’application [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)], consultez [Vue d’ensemble des services d’application ASP.NET](http://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013).  
@@ -75,7 +75,7 @@ Cette rubrique décrit comment utiliser le [!INCLUDE[vsprvs](../../../includes/v
   
 2.  Activez ou désactivez l’option **Enregistrer le hachage de mot de passe localement pour activer la connexion hors connexion**. Quand vous sélectionnez cette option, un formulaire chiffré du mot de passe de l'utilisateur est inclus dans un cache local. Cela est utile si vous implémentez le mode hors connexion pour votre application. Quand cette option est sélectionnée, vous pouvez valider des utilisateurs même si la propriété <xref:System.Web.ClientServices.ConnectivityStatus.IsOffline%2A> a la valeur `true`.  
   
-3.  Activez ou désactivez **Imposer aux utilisateurs de se reconnecter chaque fois que le cookie du serveur expire**. Le cookie d'authentification est configuré sur le service distant et indique la durée de validité de la connexion d'un utilisateur. Pour plus d’informations sur la configuration du cookie, consultez l’attribut `timeout` dans [forms, élément de authentication (Schéma des paramètres ASP.NET)](http://msdn.microsoft.com/en-us/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
+3.  Activez ou désactivez **Imposer aux utilisateurs de se reconnecter chaque fois que le cookie du serveur expire**. Le cookie d'authentification est configuré sur le service distant et indique la durée de validité de la connexion d'un utilisateur. Pour plus d’informations sur la configuration du cookie, consultez l’attribut `timeout` dans [forms, élément de authentication (Schéma des paramètres ASP.NET)](http://msdn.microsoft.com/library/8163b8b5-ea6c-46c8-b5a9-c4c3de31c0b3).  
   
      Si vous sélectionnez cette option, la tentative d'accès aux services de paramètres web ou de rôles distants après expiration du cookie d'authentification génère une <xref:System.Net.WebException>. Vous pouvez gérer cette exception et afficher une boîte de dialogue d'ouverture de session pour revalider des utilisateurs. Pour obtenir un exemple de ce comportement, consultez [Procédure pas à pas : utilisation des services d’application cliente](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md). Cette option est utile pour les applications déployées dans les emplacements publics, car elle permet de garantir que les utilisateurs quittant l'application en cours d'exécution ne restent pas authentifiés indéfiniment.  
   

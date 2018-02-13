@@ -12,11 +12,12 @@
   "branch_target_mapping": {
     "live": [
       "Publish",
+      "Intellisense",
       "Pdf"
     ],
     "live-sxs": [
       "Publish",
-      "Pdf"
+      "Intellisense"
     ],
     "master": [
       "Publish",

@@ -1,11 +1,13 @@
 ---
 title: "Long, type de données (Visual Basic)"
-ms.date: 04/20/2017
+ms.date: 01/31/2018
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.Long
+f1_keywords:
+- vb.Long
 helpviewer_keywords:
 - identifier type characters [Visual Basic], &
 - numbers [Visual Basic], whole
@@ -25,17 +27,17 @@ helpviewer_keywords:
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e21ed43ddc6efb018df0581faed1ebf270ab3ca
-ms.sourcegitcommit: c2e216692ef7576a213ae16af2377cd98d1a67fa
+ms.openlocfilehash: 51cf03afc6b2e77ccca74fc26365fc50110e1f71
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="long-data-type-visual-basic"></a>Type de données long (Visual Basic)
 
 Contient des entiers (8 octets) de 64 bits dont la valeur de -9,223,372,036,854,775,808 à 9,223,372,036,854,775,807 signés (9.2... E + 18).  
   
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
  Utilisez le `Long` type de données pour contenir des nombres entiers qui sont trop volumineuses pour tenir la `Integer` type de données.  
   
@@ -56,10 +58,18 @@ Dans l’exemple suivant, les entiers égaux à 4 294 967 296 représentés c
 
 [!code-vb[long](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#LongS)]
 
+À partir de Visual Basic 15.5, vous pouvez également utiliser le caractère de soulignement (`_`) comme séparateur de début entre le préfixe et les chiffres hexadécimaux, binaires ou octales. Exemple :
+
+```vb
+Dim number As Long = &H_0FAC_0326_1489_D68C
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
+
 Littéraux numériques peuvent également inclure le `L` [caractère de type](../../programming-guide\language-features\data-types/type-characters.md) pour désigner le `Long` type de données, comme le montre l’exemple suivant.
 
 ```vb
-Dim number = &H0FAC0326L
+Dim number = &H_0FAC_0326_1489_D68CL
 ```
 
 ## <a name="programming-tips"></a>Conseils de programmation

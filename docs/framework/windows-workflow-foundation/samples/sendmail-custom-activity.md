@@ -8,19 +8,20 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 8a6d0338b7c460d7053af9264527a6cd6d263673
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 6086ca0ccb31603874feda6df1384b9346adb49d
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sendmail-custom-activity"></a>Activité personnalisée SendMail
-Cet exemple montre comment créer une activité personnalisée dérivée de <xref:System.Activities.AsyncCodeActivity> pour envoyer du courrier à l'aide de SMTP afin de l'utiliser dans une application de workflow. L'activité personnalisée utilise les fonctionnalités de <xref:System.Net.Mail.SmtpClient> pour envoyer du courrier électronique de façon asynchrone et envoyer du courrier avec authentification. Elle fournit aussi certaines fonctionnalités d'utilisateur final telles que le mode Test, le remplacement des jetons, les modèles de fichier et le chemin d'accès de dépôt de test.  
+Cet exemple montre comment créer une activité personnalisée dérivée de <xref:System.Activities.AsyncCodeActivity> pour envoyer du courrier à l'aide de SMTP afin de l'utiliser dans une application de workflow. L’activité personnalisée utilise les fonctionnalités de <xref:System.Net.Mail.SmtpClient> d’envoyer par courrier électronique de manière asynchrone et d’envoyer des messages avec l’authentification. Elle fournit aussi certaines fonctionnalités d’utilisateur final telles que le mode Test, le remplacement des jetons, les modèles de fichier et le chemin d’accès de dépôt de test.  
   
  Le tableau suivant décrit en détail les arguments pour l'activité `SendMail`.  
   
@@ -31,17 +32,17 @@ Cet exemple montre comment créer une activité personnalisée dérivée de <xre
 |EnableSsl|bool|Indique si <xref:System.Net.Mail.SmtpClient> utilise le protocole SSL (Secure Sockets Layer) pour chiffrer la connexion.|  
 |UserName|Chaîne|Nom d'utilisateur pour définir les informations d'identification utilisées pour authentifier la propriété <xref:System.Net.Mail.SmtpClient.Credentials%2A> de l'expéditeur.|  
 |Mot de passe|Chaîne|Mot de passe pour définir les informations d'identification utilisées pour authentifier la propriété <xref:System.Net.Mail.SmtpClient.Credentials%2A> de l'expéditeur.|  
-|Objet|<xref:System.Activities.InArgument%601>\<chaîne >|Sujet du message.|  
-|Corps|<xref:System.Activities.InArgument%601>\<chaîne >|Corps du message.|  
-|Pièces jointes|<xref:System.Activities.InArgument%601>\<chaîne >|Collection de pièces jointes utilisée pour stocker des données jointes à ce message électronique.|  
-|From|<xref:System.Net.Mail.MailAddress>|Adresse d'origine de ce message électronique.|  
+|Objet|<xref:System.Activities.InArgument%601>\<string>|Sujet du message.|  
+|Corps|<xref:System.Activities.InArgument%601>\<string>|Corps du message.|  
+|Pièces jointes|<xref:System.Activities.InArgument%601>\<string>|Collection de pièces jointes utilisée pour stocker des données jointes à ce message électronique.|  
+|From|<xref:System.Net.Mail.MailAddress>|Adresse d’origine de ce message électronique.|  
 |À|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Collection d’adresses qui contient les destinataires de ce message électronique.|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Collection d’adresses qui contient les destinataires de copie carbone (CC) pour ce message électronique.|  
-|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Collection d’adresses qui contient les destinataires de copie carbone invisible (CCI) pour ce message électronique.|  
-|jetons|<xref:System.Activities.InArgument%601>< IDictionary\<chaîne, chaîne >>|Jetons à remplacer dans le corps. Cette fonctionnalité permet aux utilisateurs de spécifier certaines valeurs dans le corps qui peuvent être remplacées ultérieurement par les jetons fournis à l'aide de cette propriété.|  
+|BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|Collection d’adresses qui contient les destinataires de copie carbone invisible (Cci) pour ce message électronique.|  
+|jetons|<xref:System.Activities.InArgument%601><IDictionary\<string, string>>|Jetons à remplacer dans le corps. Cette fonctionnalité permet aux utilisateurs de spécifier certaines valeurs dans le corps qui peuvent être remplacées ultérieurement par les jetons fournis à l'aide de cette propriété.|  
 |BodyTemplateFilePath|Chaîne|Chemin d'accès à un modèle de corps. L'activité `SendMail` copie le contenu de ce fichier dans sa propriété de corps.<br /><br /> Ce modèle peut contenir des jetons qui sont remplacés par le contenu de la propriété des jetons.|  
-|TestMailTo|<xref:System.Net.Mail.MailAddress>|Lorsque cette propriété est définie, tous les courriers électroniques sont envoyés à l'adresse qu'elle indique.<br /><br /> Cette propriété n'est pas conçue pour une utilisation lors du test des workflows. Par exemple, assurez-vous que tous les courriers électroniques sont envoyés sans les envoyer aux destinataires réels.|  
-|TestDropPath|Chaîne|Lorsque cette propriété est définie, tous les courriers électroniques sont également enregistrés dans le fichier indiqué.<br /><br /> Cette propriété est conçue pour une utilisation lors du test ou débogage des workflows, pour vérifier que le format et le contenu des messages électroniques sortants sont appropriés.|  
+|TestMailTo|<xref:System.Net.Mail.MailAddress>|Lorsque cette propriété est définie, tous les messages électroniques sont envoyés à l’adresse spécifiée.<br /><br /> Cette propriété n'est pas conçue pour une utilisation lors du test des workflows. Par exemple, lorsque vous souhaitez vous assurer que tous les messages électroniques sont envoyés sans les envoyer aux destinataires réels.|  
+|TestDropPath|Chaîne|Lorsque cette propriété est définie, tous les messages électroniques sont également enregistrés dans le fichier spécifié.<br /><br /> Cette propriété est destinée à être utilisée lorsque vous testez ou déboguer des workflows, pour vous assurer que le format et le contenu des messages électroniques sortants est appropriée.|  
   
 ## <a name="solution-contents"></a>Contenu de la solution  
  La solution contient deux projets.  
@@ -115,7 +116,7 @@ new SendMail
 ## <a name="set-up-instructions"></a>Instructions d'installation  
  Vous devez avoir accès à un serveur SMTP pour cet exemple.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]configuration d’un serveur SMTP, consultez les liens suivants.  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] configuration d’un serveur SMTP, consultez les liens suivants.  
   
 -   [Microsoft Technet](http://go.microsoft.com/fwlink/?LinkId=166060)  
   
@@ -133,9 +134,9 @@ new SendMail
   
 2.  Vérifiez que vous avez accès à un serveur SMTP valide. Consultez les instructions d'installation.  
   
-3.  Configurez le programme avec l'adresse de votre serveur et les adresses d'expéditeur et de destinataire.  
+3.  Configuration du programme avec l’adresse de votre serveur et à partir d’et vers les adresses de messagerie.  
   
-     Pour exécuter correctement cet exemple, vous devrez peut-être configurer la valeur des adresses d'expéditeur et de destinataire et l'adresse du serveur SMTP dans les fichiers  Program.cs et Sequence.xaml. Vous devrez modifier l'adresse à ces deux emplacements car le programme envoie les messages de différentes façons.  
+     Pour exécuter correctement cet exemple, vous devrez peut-être configurer la valeur de depuis et vers les adresses de messagerie et l’adresse du serveur SMTP dans le fichier Program.cs et Sequence.xaml. Vous devrez modifier l'adresse à ces deux emplacements car le programme envoie les messages de différentes façons.  
   
 4.  Pour générer la solution, appuyez sur Ctrl+Maj+B.  
   

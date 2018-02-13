@@ -1,19 +1,18 @@
 ---
 title: "Démarrage rapide - Environnement local - Guide C#"
-description: "Ce démarrage rapide fournit les notions de base pour exécuter les démarrages rapides localement"
+description: "Ce guide de démarrage rapide fournit les notions de base pour exécuter les guides de démarrage rapide localement"
 author: billwagner
-ms.author: wiwagn
-ms.date: 12/07/2017
 ms.topic: article
+ms.date: 12/07/2017
 ms.prod: .net
 ms.technology: devlang-csharp
 ms.devlang: csharp
 ms.custom: mvc
-ms.openlocfilehash: 4cbe66df4173854870dd6ac68c52e8c87c46c1f6
-ms.sourcegitcommit: 9bee08539b1886c9d57fa3d5bd8a58dfdd7cad94
+ms.openlocfilehash: e7747941a7fb1ff43b1a259a78d82665b024a6dd
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="local-environment"></a>Environnement local
 
@@ -24,13 +23,13 @@ Vous pouvez aussi installer le [Kit SDK .NET Core](http://dot.net/core) et [Visu
 
 ## <a name="basic-application-development-flow"></a>Flux de développement d’une application de base
 
-Vous créez des applications à l’aide de la commande [`dotnet new`](../../core/tools/dotnet-new.md). Cette commande génère les fichiers et ressources nécessaires pour votre application. Les démarrages rapides utilisent le type d’application `console`.
+Vous créez des applications à l’aide de la commande [`dotnet new`](../../core/tools/dotnet-new.md). Cette commande génère les fichiers et ressources nécessaires pour votre application. Les guides de démarrage rapide utilisent le type d’application `console`.
 
 Les autres commandes que vous utiliserez sont [`dotnet build`](../../core/tools/dotnet-build.md) pour générer le fichier exécutable et [`dotnet run`](../../core/tools/dotnet-run.md) pour exécuter le fichier exécutable.
 
-## <a name="pick-your-quickstart"></a>Choisir le démarrage rapide
+## <a name="pick-your-quickstart"></a>Choisir le guide de démarrage rapide
 
-Vous pouvez démarrer à l’aide de l’un des démarrages rapides suivants :
+Vous pouvez démarrer à l’aide de l’un des guides de démarrage rapide suivants :
 
 ## <a name="numbers-in-cnumbers-in-csharp-localmd"></a>[Nombres en C#](numbers-in-csharp-local.md)
 

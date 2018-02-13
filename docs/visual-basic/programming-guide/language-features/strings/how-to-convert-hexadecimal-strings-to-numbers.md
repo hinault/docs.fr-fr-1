@@ -1,11 +1,10 @@
 ---
 title: "Comment : convertir des chaînes hexadécimales en nombres (Visual Basic)"
 ms.custom: 
-ms.date: 07/20/2015
+ms.date: 01/31/2018
 ms.prod: .net
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
 helpviewer_keywords:
 - numbers [Visual Basic], hexadecimals
@@ -14,26 +13,33 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-caps.latest.revision: "9"
-author: dotnet-bot
-ms.author: dotnetcontent
-ms.openlocfilehash: e6b1beae273fa737ca7c95a253d95c947e760f9c
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+author: petrusha
+ms.author: ronpet
+ms.manager: wpickett
+ms.openlocfilehash: c35ac615e3f87710f934a1cf66e6546625298bd0
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>Comment : convertir des chaînes hexadécimales en nombres (Visual Basic)
-Cet exemple convertit une chaîne hexadécimale à un entier à l’aide de la <xref:System.Convert.ToInt32%2A> (méthode).  
+Cet exemple convertit une chaîne hexadécimale à un entier à l’aide de la <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType> (méthode).  
   
-### <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Pour convertir une chaîne hexadécimale en un nombre  
+## <a name="to-convert-a-hexadecimal-string-to-a-number"></a>Pour convertir une chaîne hexadécimale en un nombre  
   
--   Utilisez la <xref:System.Convert.ToInt32%2A> méthode pour convertir le nombre exprimé en base-16 en un entier.  
+-   Utilisez la <xref:System.Convert.ToInt32(System.String,System.Int32)> méthode pour convertir le nombre exprimé en base-16 en un entier.  
   
-     Le premier argument de la <xref:System.Convert.ToInt32%2A> méthode est la chaîne à convertir. Le deuxième argument décrit la base dans laquelle le nombre est exprimé ; hexadécimal est de base 16.  
+     Le premier argument de la <xref:System.Convert.ToInt32(System.String,System.Int32)> méthode est la chaîne à convertir. Le deuxième argument décrit la base dans laquelle le nombre est exprimé ; hexadécimal est de base 16.  
   
-     [!code-vb[VbVbalrStrings#62](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]  
-  
+     [!code-vb[HexConversion](../../../../visual-basic/language-reference/functions/codesnippet/VisualBasic/how-to-convert-hexadecimal-strings-to-numbers_1.vb)]  
+
+- Notez que la chaîne hexadécimale présente les restrictions suivantes :
+
+   - Il ne peut pas inclure le `&h` préfixe.
+   - Il ne peut pas inclure le `_` séparateur numérique.
+
+   Si le préfixe ou un séparateur numérique est présente, l’appel à la <xref:System.Convert.ToInt32(System.String,System.Int32)> méthode lève une exception un <xref:System.FormatException>.
+
 ## <a name="see-also"></a>Voir aussi  
  <xref:Microsoft.VisualBasic.Conversion.Hex%2A>  
- <xref:System.Convert.ToInt32%2A>
+ <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>

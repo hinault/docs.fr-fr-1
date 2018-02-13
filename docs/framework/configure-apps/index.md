@@ -35,11 +35,11 @@ author: mcleblanc
 ms.author: markl
 manager: markl
 ms.workload: dotnet
-ms.openlocfilehash: cb98b4d7bbc70fd54e8928c741aa444a6b832046
-ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
+ms.openlocfilehash: 74b5bce3191b2d40e5b37d64b3d1eee24395ce4c
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>Configuration des applications à l'aide de fichiers de configuration
 Le .NET Framework, par le biais de fichiers de configuration, permet aux développeurs et administrateurs de contrôler la façon dont les applications s'exécutent avec la souplesse requise. Les fichiers de configuration sont des fichiers XML qui peuvent être modifiés selon les besoins. Un administrateur peut exercer un contrôle sur les ressources protégées auxquelles une application peut accéder, les versions d'assemblys utilisées par une application et l'endroit où sont situés les applications et objets distants. Les développeurs peuvent stocker des paramètres dans des fichiers de configuration, de façon à ce qu'il ne leur soit pas nécessaire de recompiler une application chaque fois qu'un paramètre change. Cette section décrit les éléments qui peuvent être configurés et explique en quoi la configuration d'une application peut se révéler utile.  
@@ -50,7 +50,7 @@ Le .NET Framework, par le biais de fichiers de configuration, permet aux dévelo
  Cette rubrique décrit la syntaxe des fichiers de configuration et fournit des informations sur les trois types de fichiers de configuration : ordinateur, application et sécurité.  
   
 ## <a name="configuration-file-format"></a>Format des fichiers de configuration  
- Les fichiers de configuration contiennent des éléments qui sont des structures de données logiques qui définissent des informations de configuration. Dans un fichier de configuration, vous utilisez des étiquettes pour indiquer le début et la fin d’un élément. Par exemple, l’élément `<runtime>` se compose d’`<runtime>`*éléments enfants*`</runtime>`. Un élément vide s’écrirait ainsi : `<runtime/>` ou `<runtime>``</runtime>`.  
+ Les fichiers de configuration contiennent des éléments qui sont des structures de données logiques qui définissent des informations de configuration. Dans un fichier de configuration, vous utilisez des étiquettes pour indiquer le début et la fin d’un élément. Par exemple, l’élément `<runtime>` se compose d’`<runtime>`*éléments enfants*`</runtime>`. Un élément vide s’écrirait ainsi : `<runtime/>` ou `<runtime></runtime>`.  
   
  Comme avec tous les fichiers XML, la syntaxe des fichiers de configuration respecte la casse.  
   

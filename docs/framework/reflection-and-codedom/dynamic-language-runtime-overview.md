@@ -1,12 +1,8 @@
 ---
 title: "Vue d’ensemble du Dynamic Language Runtime | Microsoft Docs"
-ms.custom: 
 ms.date: 03/30/2017
 ms.prod: .net-framework
-ms.reviewer: 
-ms.suite: 
 ms.technology: dotnet-clr
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dynamic language runtime
@@ -19,11 +15,11 @@ author: rpetrusha
 ms.author: ronpet
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 78de2016e02c242fcf6ec454a56a4beff41c2d12
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 54ea1f9f071d749058450487d25bdff13ca04549
+ms.sourcegitcommit: 8bde7a3432f30fc771079744955c75c58c4eb393
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/20/2018
 ---
 # <a name="dynamic-language-runtime-overview"></a>Vue d'ensemble du Dynamic Language Runtime
 Le *Dynamic Language Runtime* (DLR) est un environnement d’exécution ajoutant au Common Language Runtime (CLR) un ensemble de services pour les langages dynamiques. Le DLR simplifie le développement de langages dynamiques à exécuter sur le .NET Framework et l’ajout de fonctionnalités dynamiques aux langages typés statiquement.  
@@ -52,10 +48,10 @@ Le *Dynamic Language Runtime* (DLR) est un environnement d’exécution ajoutant
   
  `scriptobj.Count += 1;`  
   
- Comme le CLR, le DLR fait partie du .NET Framework et est fourni avec les packages d’installation de Visual Studio et du .NET Framework. La version open-source du DLR peut également être téléchargée à partir du site web de [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028).  
+ Comme le CLR, le DLR fait partie du .NET Framework et est fourni avec les packages d’installation de Visual Studio et du .NET Framework. La version open-source du DLR peut également être téléchargée à partir du dépôt [IronLanguages/dlr](https://github.com/IronLanguages/dlr) sur GitHub.  
   
 > [!NOTE]
->  La version Open Source du DLR fournit toutes les fonctionnalités du DLR disponibles dans Visual Studio et dans le .NET Framework. Elle fournit également une prise en charge supplémentaire pour les implémenteurs de langage. Pour plus d’informations, consultez la documentation sur le site web de [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028).  
+>  La version Open Source du DLR fournit toutes les fonctionnalités du DLR disponibles dans Visual Studio et dans le .NET Framework. Elle fournit également une prise en charge supplémentaire pour les implémenteurs de langage. Pour plus d’informations, consultez la documentation dans le dépôt [IronLanguages/dlr](https://github.com/IronLanguages/dlr) sur GitHub. 
   
  Voici quelques exemples de langages développés à l’aide du DLR :  
   
@@ -98,7 +94,7 @@ Architecture du DLR
  Le DLR utilise des classeurs dans les sites d’appel pour communiquer non seulement avec le .NET Framework, mais aussi avec d’autres infrastructures et services, notamment Silverlight et COM. Les classeurs encapsulent la syntaxe d’un langage et spécifient comment exécuter des opérations dans un site d’appel à l’aide des arborescences de l’expression. Ainsi, les langages dynamiques et typés statiquement qui utilisent le DLR peuvent partager des bibliothèques et accéder à toutes les technologies prises en charge par le DLR.  
   
 ## <a name="dlr-documentation"></a>Documentation DLR  
- Pour plus d’informations sur la façon d’utiliser la version Open Source du DLR afin d’ajouter le comportement dynamique à un langage, ou sur la façon d’utiliser un langage dynamique avec le .NET Framework, consultez la documentation sur le site web de [CodePlex](http://go.microsoft.com/fwlink/?LinkId=141028).  
+ Pour plus d’informations sur la façon d’utiliser la version Open Source du DLR afin d’ajouter le comportement dynamique à un langage, ou sur la façon d’utiliser un langage dynamique avec le .NET Framework, consultez la documentation dans le dépôt [IronLanguages/dlr](https://github.com/IronLanguages/dlr/tree/master/Docs) sur GitHub.  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Dynamic.ExpandoObject>  

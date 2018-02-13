@@ -3,9 +3,11 @@ title: "SByte, type de données (Visual Basic)"
 ms.date: 04/20/2017
 ms.prod: .net
 ms.suite: 
-ms.technology: devlang-visual-basic
+ms.technology:
+- devlang-visual-basic
 ms.topic: article
-f1_keywords: vb.sbyte
+f1_keywords:
+- vb.sbyte
 helpviewer_keywords:
 - numbers [Visual Basic], whole
 - whole numbers
@@ -17,20 +19,20 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-caps.latest.revision: "18"
+caps.latest.revision: 
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bcd00665ec5b8651089811a61212bfa302fe95d
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: d391d7eea27ec7696dbb4c28da8916c744712f32
+ms.sourcegitcommit: d2da0142247ef42a219a5d2907f153e62dc6ea0d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte, type de données (Visual Basic)
 
 Contient des entiers 8 bits (1 octet) de valeurs comprises entre -128 et 127 signés.  
   
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Utilisez le `SByte` type de données pour contenir des valeurs entières qui ne nécessitent pas la largeur totale des données de `Integer` ou même la largeur de la moitié des données de `Short`. Dans certains cas, le common language runtime peut être en mesure de compresser vos `SByte` variables étroitement ensemble et d’enregistrer la consommation de mémoire.
 
@@ -50,6 +52,14 @@ Dans l’exemple suivant, les entiers égal à-102 sont représentées sous form
 À partir de Visual Basic 2017, vous pouvez également utiliser le caractère de soulignement, `_`, comme un séparateur de chiffres pour améliorer la lisibilité, comme l’exemple suivant montre le.
 
 [!code-vb[SByteSeparator](../../../../samples/snippets/visualbasic/language-reference/data-types/numeric-literals.vb#SByteS)]  
+
+À partir de Visual Basic 15.5, vous pouvez également utiliser le caractère de soulignement (`_`) comme séparateur de début entre le préfixe et les chiffres hexadécimaux, binaires ou octales. Exemple :
+
+```vb
+Dim number As SByte = &H_F9
+```
+
+[!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
 Si le littéral entier est en dehors de la plage de `SByte` (autrement dit, s’il est inférieur à <xref:System.SByte.MinValue?displayProperty=nameWithType> ou supérieur à <xref:System.SByte.MaxValue?displayProperty=nameWithType>, une erreur de compilation se produit. Lorsqu’un littéral entier n’a aucun suffixe, un [entier](integer-data-type.md) est déduit. Si le littéral entier est en dehors de la plage de la `Integer` type, un [Long](long-data-type.md) est déduit. Cela signifie que, dans les exemples précédents, les littéraux numériques `0x9A` et `0b10011010` sont interprétées comme des entiers signés 32 bits avec la valeur 156, ce qui dépasse <xref:System.SByte.MaxValue?displayProperty=nameWithType>. Pour compiler le code à ce qui affecte un entier décimal non à un `SByte`, vous pouvez effectuer l’une des opérations suivantes :
 

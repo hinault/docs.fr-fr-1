@@ -13,19 +13,19 @@ ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
 caps.latest.revision: "33"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 7d3d59f63102ccf3c1d54e4028635c8daad56164
-ms.sourcegitcommit: 401c4427a3ec0d1263543033b3084039278509dc
+ms.openlocfilehash: 11aab223ee70ff69d8c3470e747738bfe44540ea
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="langversion-c-compiler-options"></a>/langversion (Options du compilateur C#)
+# <a name="-langversion-c-compiler-options"></a>-langversion (Options du compilateur C#)
 Force le compilateur à accepter uniquement la syntaxe incluse dans la spécification choisie du langage C#.  
   
 ## <a name="syntax"></a>Syntaxe  
   
 ```console  
-/langversion:option  
+-langversion:option  
 ```  
   
 ## <a name="arguments"></a>Arguments  
@@ -51,14 +51,14 @@ Force le compilateur à accepter uniquement la syntaxe incluse dans la spécific
 -->
 
   
-## <a name="remarks"></a>Remarques  
- Les métadonnées référencées par votre application C# ne sont pas visées par l’option de compilateur **/langversion**.  
+## <a name="remarks"></a>Notes  
+ Les métadonnées référencées par votre application C# ne sont pas visées par l’option de compilateur **-langversion**.  
   
- Sachant que chaque version du compilateur C# contient des extensions de la spécification du langage, **/langversion** ne vous offre pas les fonctionnalités équivalentes d’une version antérieure du compilateur.  
+ Sachant que chaque version du compilateur C# contient des extensions de la spécification du langage, **-langversion** ne vous offre pas les fonctionnalités équivalentes d’une version antérieure du compilateur.  
  
  De plus, alors que les mises à jour de la version de C# coïncident généralement avec la publication des principales versions du .NET Framework, la nouvelle syntaxe et les nouvelles fonctionnalités ne sont pas nécessairement liées à cette version spécifique du framework. Alors que les nouvelles fonctionnalités nécessiteront certainement une nouvelle mise à jour du compilateur qui sera publiée en même temps que la révision de C#, chaque fonctionnalité spécifique exigera une configuration minimale pour les API .NET ou le common language runtime qui pourra lui permettre de s’exécuter sur des frameworks de bas niveau moyennant des packages NuGet ou d’autres bibliothèques.
   
- Quel que soit le paramètre **/langversion** que vous utiliserez, vous vous servirez de la version active du common language runtime pour créer votre fichier .exe ou .dll. Les assemblys friend et [/moduleassemblyname (Option du compilateur C#)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), qui fonctionnent sous **/langversion:ISO-1**, représentent la seule exception.  
+ Quel que soit le paramètre **-langversion** que vous utiliserez, vous vous servirez de la version active du common language runtime pour créer votre fichier .exe ou .dll. Les assemblys friend et [-moduleassemblyname (Option du compilateur C#)](../../../csharp/language-reference/compiler-options/moduleassemblyname-compiler-option.md), qui fonctionnent sous **-langversion:ISO-1**, représentent la seule exception.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio  
   
@@ -94,13 +94,13 @@ Force le compilateur à accepter uniquement la syntaxe incluse dans la spécific
 -->
 
 ### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>Version minimale obligatoire du compilateur pour une prise en charge de toutes les fonctionnalités du langage   
-[↩](#TDefault)<a name="FDefault">Default</a>, <a name="FISO1">ISO1</a> : Microsoft Visual Studio/Build Tools .Net 2002 ou compilateur .Net Framework 1.0 intégré     
-[↩](#TISO2)<a name="FISO2">ISO2</a> : Microsoft Visual Studio/Build Tools 2005 ou compilateur .Net Framework 2.0 intégré    
-[↩](#TCS3)<a name="FCS3">CS3</a> : Microsoft Visual Studio/Build Tools 2008 ou compilateur .Net Framework 3.5 intégré    
-[↩](#TCS4)<a name="FCS4">CS4</a> : Microsoft Visual Studio/Build Tools 2010 ou compilateur .Net Framework 4.0 intégré    
-[↩](#TCS5)<a name="FCS5">CS5</a> : Microsoft Visual Studio/Build Tools 2012 ou compilateur .Net Framework 4.5 intégré    
-[↩](#TCS6)<a name="FCS6">CS6</a> : Microsoft Visual Studio/Build Tools 2015    
-[↩](#TCS7)<a name="FCS7">CS7</a>, <a name="FLatest">Latest</a> : Microsoft Visual Studio/Build Tools 2017   
+[↩](#TDefault)<a name="FDefault">Default</a>, <a name="FISO1">ISO1</a> : Microsoft Visual Studio/Build Tools .Net 2002 ou compilateur .Net Framework 1.0 intégré     
+[↩](#TISO2)<a name="FISO2">ISO2</a> : Microsoft Visual Studio/Build Tools 2005 ou compilateur .Net Framework 2.0 intégré    
+[↩](#TCS3)<a name="FCS3">CS3</a> : Microsoft Visual Studio/Build Tools 2008 ou compilateur .Net Framework 3.5 intégré    
+[↩](#TCS4)<a name="FCS4">CS4</a> : Microsoft Visual Studio/Build Tools 2010 ou compilateur .Net Framework 4.0 intégré    
+[↩](#TCS5)<a name="FCS5">CS5</a> : Microsoft Visual Studio/Build Tools 2012 ou compilateur .Net Framework 4.5 intégré    
+[↩](#TCS6)<a name="FCS6">CS6</a> : Microsoft Visual Studio/Build Tools 2015    
+[↩](#TCS7)<a name="FCS7">CS7</a>, <a name="FLatest">Latest</a> : Microsoft Visual Studio/Build Tools 2017   
 
 <!--- Uncomment and add to the above when they become officially released
 [↩](#TCS71)<a name="FCS71">CS71</a>: Microsoft Visual Studio/Build Tools 20??    

@@ -31,11 +31,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: d24ad84c604921e4dd33e818c0b80d8ab315cd58
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: ce83713d2483320569bde0d5c9a677f0b357ebf2
+ms.sourcegitcommit: c3ebb11a66e85a465c9ba2c42592222630b7ff9e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="xaml-overview-wpf"></a>Vue d’ensemble du langage XAML (WPF)
 Cette rubrique décrit les fonctionnalités du langage XAML et montre comment utiliser XAML pour écrire des applications [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]. Cette rubrique décrit en particulier le langage XAML tel qu’il est implémenté par [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]. Le XAML lui-même est un concept de langage plus vaste que [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)].  
@@ -56,7 +56,7 @@ Cette rubrique décrit les fonctionnalités du langage XAML et montre comment u
 ## <a name="xaml-syntax-in-brief"></a>Syntaxe XAML en bref  
  Les sections suivantes expliquent les bases de la syntaxe XAML et donnent un court exemple de balisage. Ces sections ne visent pas à fournir des informations complètes sur toutes les formes de syntaxe, telles que représentées dans le système de types de stockage. Pour plus d’informations sur les spécificités de la syntaxe XAML propres à chacune des formes syntaxiques présentées dans cette rubrique, consultez [Syntaxe XAML en détail](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md).  
   
- La plupart des informations présentées dans les sections suivantes peuvent vous paraître élémentaires si vous connaissez déjà le langage XML. C’est une conséquence d’un des principes de base de la conception du langage XAML.  Le XAML définit ses propres concepts, mais ces concepts fonctionnent dans le format du langage et du balisage XML.  
+ La plupart des informations présentées dans les sections suivantes peuvent vous paraître élémentaires si vous connaissez déjà le langage XML. C’est une conséquence d’un des principes de base de la conception du langage XAML.  Le langage XAML définit ses propres concepts, mais ces concepts fonctionnent dans le format de langue et le balisage XML.  
   
 ### <a name="xaml-object-elements"></a>Éléments objet XAML  
  Un élément objet déclare généralement une instance d’un type. Ce type est défini dans les assemblys qui fournissent les types de stockage d’une technologie utilisant le XAML comme langage.  

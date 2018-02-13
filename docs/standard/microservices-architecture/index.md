@@ -11,11 +11,11 @@ ms.topic: article
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 87a4b9f2bb076eccfa79e2951e509a35461ff257
-ms.sourcegitcommit: e7f04439d78909229506b56935a1105a4149ff3d
+ms.openlocfilehash: 289f34b12cc0278212ceb737c2b9cb3f2ff986c1
+ms.sourcegitcommit: ed26cfef4e18f6d93ab822d8c29f902cff3519d1
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/23/2017
+ms.lasthandoff: 01/17/2018
 ---
 ![](./media/cover.png)
 
@@ -65,7 +65,7 @@ Rédacteurs :
 
 Participants et réviseurs :
 
-> **Jeffrey Ritcher**, ingénieur logiciel partenaire, équipe Azure, Microsoft
+> **Jeffrey Richter**, ingénieur logiciel partenaire, équipe Azure, Microsoft
 >
 > **Jimmy Bogard**, architecte en chef chez Headspring
 >

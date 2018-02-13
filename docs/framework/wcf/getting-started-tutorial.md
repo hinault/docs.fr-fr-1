@@ -18,11 +18,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 182e82eec107c170a793d0d48bcfe5493c04d618
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 74a322730c5e9fc205097da310a8db1fd7c50f82
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="getting-started-tutorial"></a>Didacticiel de mise en route
 Les rubriques contenues dans cette section visent à vous donner un aperçu de la programmation de [!INCLUDE[indigo1](../../../includes/indigo1-md.md)]. Elles doivent être parcourues dans l'ordre de la liste indiquée au bas de cette rubrique. En suivant ce didacticiel, vous aurez une compréhension de base des étapes requises pour créer un service et des applications clientes [!INCLUDE[indigo2](../../../includes/indigo2-md.md)]. Un service expose un ou plusieurs points de terminaison, chaque point de terminaison exposant une ou plusieurs opérations de service. Le *point de terminaison* d’un service spécifie une adresse où le service peut être trouvé, une liaison qui contient les informations qui décrivent comment un client doit communiquer avec le service et un contrat qui définit les fonctionnalités fournie par le service pour ses clients.  
@@ -36,7 +36,7 @@ Les rubriques contenues dans cette section visent à vous donner un aperçu de l
 > [!NOTE]
 >  Si vous exécutez [!INCLUDE[wv](../../../includes/wv-md.md)] ou versions ultérieures du système d’exploitation Windows, vous devez démarrer [!INCLUDE[vs_current_short](../../../includes/vs-current-short-md.md)] en allant dans le menu Démarrer et en cliquant avec le bouton droit sur Visual Studio 2011 et en sélectionnant **exécuter en tant qu’administrateur**. Pour toujours lancer Visual Studio 2011 en tant qu’un administrateur, vous pouvez créer un raccourci, cliquez avec le bouton droit sur le raccourci, sélectionnez Propriétés, sélectionnez le **compatibilité** et vérifiez la **exécuter ce programme en tant qu’administrateur** case à cocher. Lorsque vous démarrez Visual Studio 2011 à partir de ce raccourci, l'application s'exécute systématiquement en tant qu'administrateur.  
   
- Pour des exemples d’applications qui peuvent être téléchargés sur votre disque dur et s’exécutent, consultez les rubriques de [exemples Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). Cette rubrique, consultez en particulier, la [mise en route](../../../docs/framework/wcf/samples/getting-started-sample.md).  
+ Pour des exemples d’applications qui peuvent être téléchargés sur votre disque dur et s’exécutent, consultez les rubriques de [exemples Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91). Cette rubrique, consultez en particulier, la [mise en route](../../../docs/framework/wcf/samples/getting-started-sample.md).  
   
  Pour plus d’informations sur la création de services et les clients, consultez [programmation WCF de base](../../../docs/framework/wcf/basic-wcf-programming.md).  
   
@@ -65,7 +65,7 @@ Les rubriques contenues dans cette section visent à vous donner un aperçu de l
  <xref:System.ServiceModel.OperationContractAttribute>  
   
 ## <a name="related-sections"></a>Rubriques connexes  
- [Exemples Windows Communication Foundation](http://msdn.microsoft.com/en-us/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Exemples Windows Communication Foundation](http://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
   
  [Cycle de vie de la programmation de base](../../../docs/framework/wcf/basic-programming-lifecycle.md)  
   

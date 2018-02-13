@@ -5,20 +5,22 @@ ms.date: 03/30/2017
 ms.prod: .net-framework
 ms.reviewer: 
 ms.suite: 
-ms.technology: dotnet-clr
+ms.technology:
+- dotnet-clr
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
-ms.workload: dotnet
-ms.openlocfilehash: 629d5c55bd679539220566db17401151a1339d18
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9e6b3d84db619ba1b4b5785b134cfe87d1b15cdc
+ms.sourcegitcommit: cf22b29db780e532e1090c6e755aa52d28273fa6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="selecting-a-credential-type"></a>Sélection d'un type d'informations d'identification
 *Informations d’identification* sont les données [!INCLUDE[indigo1](../../../../includes/indigo1-md.md)] utilise pour établir une identité déclarée ou des fonctions. Par exemple, un passeport est une information d'identification émise par un gouvernement pour établir la citoyenneté dans un pays ou une région. Dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)], les informations d'identification peuvent prendre plusieurs formes, telles que les jetons de nom d'utilisateur et les certificats X.509. Cette rubrique traite des informations d'identification, de leur mode d'utilisation dans [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] et de la façon de sélectionner les informations d'identification appropriées pour votre application.  
@@ -64,7 +66,7 @@ ms.lasthandoff: 12/22/2017
 >  Lorsque la sécurité SSL est utilisée avec le .NET Framework version 3.5 et ultérieure, un client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] utilise les certificats intermédiaires dans son magasin de certificats et les certificats intermédiaires reçus au cours de la négociation SSL pour effectuer la validation de chaîne de certificats sur le certificat du service. .NET Framework 3.0 n'utilise que les certificats intermédiaires installés dans le magasin de certificats local.  
   
 #### <a name="out-of-band-negotiation"></a>Négociation hors bande  
- Si la négociation automatique est désactivée, les informations d'identification du service doivent être configurées au niveau du client avant l'envoi de messages au service. Cela est également appelé un *hors-bande* de configuration. Par exemple, si le type d'informations d'identification spécifié est un certificat et que la négociation automatique est désactivée, le client doit contacter le propriétaire de service pour recevoir et installer le certificat sur l'ordinateur qui exécute l'application cliente. Cette opération peut avoir lieu, par exemple, lorsque vous souhaitez contrôler de manière stricte les clients pouvant accéder à un service dans un scénario interentreprises. Cette négociation hors bande peut s'effectuer par messagerie électronique, et le certificat X.509 est stocké dans le magasin de certificats Windows à l'aide d'un outil tel que le composant logiciel enfichable Certificats MMC (Microsoft Management Console).  
+ Si la négociation automatique est désactivée, les informations d'identification du service doivent être configurées au niveau du client avant l'envoi de messages au service. Cela est également appelé un *hors-bande* de configuration. Par exemple, si le type d'informations d'identification spécifié est un certificat et que la négociation automatique est désactivée, le client doit contacter le propriétaire de service pour recevoir et installer le certificat sur l'ordinateur qui exécute l'application cliente. Cette opération peut avoir lieu, par exemple, lorsque vous souhaitez contrôler de manière stricte les clients pouvant accéder à un service dans un scénario interentreprises. Cette sortie-de bande-négociation peut être effectuée par courrier électronique, et le certificat X.509 est stocké dans le magasin de certificats Windows, à l’aide d’un outil tel que le composant logiciel enfichable Certificats de Microsoft Management Console (MMC).  
   
 > [!NOTE]
 >  La propriété <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> est utilisée pour fournir au service un certificat obtenu dans le cadre d'une négociation hors bande. Celui-ci est nécessaire pour utiliser la classe <xref:System.ServiceModel.BasicHttpBinding> parce que la liaison n'autorise pas de négociation automatisée. La propriété est également utilisée dans un scénario duplex non corrélé. Dans ce scénario, un serveur envoie un message au client sans exiger que le client envoie en premier une demande au serveur. Comme le serveur ne reçoit pas de demande du client, il doit utiliser le certificat du client pour chiffrer le message au client.  
@@ -106,7 +108,7 @@ ms.lasthandoff: 12/22/2017
 > [!IMPORTANT]
 >  Il existe un cas où l'identité ne peut pas être établie (autrement dit, lorsque le contexte de sécurité établi est activé, ce qui est le comportement par défaut). Si vous créez un service qui communique avec un deuxième service, l'identité utilisée pour ouvrir le client [!INCLUDE[indigo2](../../../../includes/indigo2-md.md)] pour le deuxième service ne peut pas être modifiée. Cela devient problématique si plusieurs clients sont autorisés à utiliser le premier service et que le service emprunte l'identité des clients lors de l'accès au deuxième service. Si le service réutilise le même client pour tous les appelants, tous les appels au deuxième service sont effectués sous l'identité du premier appelant ayant été utilisé pour ouvrir le client au deuxième service. En d'autres termes, le service utilise l'identité du premier client pour tous ses clients afin de communiquer avec le deuxième service. Cette situation peut entraîner l'élévation des privilèges. Si ce comportement n'est pas souhaité pour votre service, vous devez suivre chaque appelant et créer un client au deuxième service pour chaque appelant et veiller à ce que le service utilise uniquement le bon client pour le bon appelant en vue de communiquer avec le deuxième service.  
   
- [!INCLUDE[crabout](../../../../includes/crabout-md.md)]informations d’identification et des sessions sécurisées, consultez [considérations de sécurité pour des Sessions sécurisées](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
+ [!INCLUDE[crabout](../../../../includes/crabout-md.md)] informations d’identification et des sessions sécurisées, consultez [considérations de sécurité pour des Sessions sécurisées](../../../../docs/framework/wcf/feature-details/security-considerations-for-secure-sessions.md).  
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>  

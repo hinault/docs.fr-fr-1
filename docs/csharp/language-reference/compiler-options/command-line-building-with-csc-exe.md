@@ -11,11 +11,11 @@ ms.assetid: 66e70056-dd20-453c-a9b3-507e0478b015
 caps.latest.revision: "28"
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: 5ac357ab20f44de4e0613a7af863ad6789e84ec8
-ms.sourcegitcommit: 4f3fef493080a43e70e951223894768d36ce430a
+ms.openlocfilehash: 5fe7b735977b0cde0bed266815987b773be6bdbe
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="command-line-build-with-cscexe"></a>Génération à partir de la ligne de commande avec csc.exe
 Vous pouvez appeler le compilateur C# en tapant le nom de son fichier exécutable (*csc.exe*) dans une invite de commandes.
@@ -70,31 +70,31 @@ csc File.cs
 - Compile *File.cs*, ce qui produit *File.dll* :
 
 ```console
-csc /target:library File.cs
+csc -target:library File.cs
 ```
 
 - Compile *File.cs* et crée *My.exe* :
 
 ```console
-csc /out:My.exe File.cs
+csc -out:My.exe File.cs
 ```
 
 - Compile tous les fichiers C# du répertoire actif avec les optimisations activées et définit le symbole DEBUG. La sortie est *File2.exe* :
 
 ```console
-csc /define:DEBUG /optimize /out:File2.exe *.cs
+csc -define:DEBUG -optimize -out:File2.exe *.cs
 ```
 
 - Compile tous les fichiers C# du répertoire actif, ce qui produit une version Debug de *File2.dll*. Aucun logo ni aucun avertissement n’est affiché :
 
 ```console
-csc /target:library /out:File2.dll /warn:0 /nologo /debug *.cs
+csc -target:library -out:File2.dll -warn:0 -nologo -debug *.cs
 ```
 
 - Compile tous les fichiers C# du répertoire actif vers *Something.xyz* (une DLL) :
 
 ```console
-csc /target:library /out:Something.xyz *.cs
+csc -target:library -out:Something.xyz *.cs
 ```
 
 ## <a name="differences-between-c-compiler-and-c-compiler-output"></a>Différences entre les résultats de la compilation en C# et ceux de la compilation en C++
@@ -106,6 +106,6 @@ Aucun fichier objet (*.obj*) n’est créé par l’appel du compilateur C#. Le
  [Options du compilateur C# par catégorie](../../../csharp/language-reference/compiler-options/listed-by-category.md)  
  [Main() et arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/index.md)  
  [Arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/command-line-arguments.md)  
- [Comment : afficher les Arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
+ [Guide pratique pour afficher les arguments de ligne de commande](../../../csharp/programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)  
  [Guide pratique pour accéder à des arguments de ligne de commande à l’aide de foreach](../../../csharp/programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)  
  [Valeurs de retour Main()](../../../csharp/programming-guide/main-and-command-args/main-return-values.md)

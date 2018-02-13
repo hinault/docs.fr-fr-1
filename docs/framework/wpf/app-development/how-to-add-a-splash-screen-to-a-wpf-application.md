@@ -19,11 +19,11 @@ author: dotnet-bot
 ms.author: dotnetcontent
 manager: wpickett
 ms.workload: dotnet
-ms.openlocfilehash: 1ed9669479a3854c843716a1aeb37f7701ea7d7b
-ms.sourcegitcommit: 16186c34a957fdd52e5db7294f291f7530ac9d24
+ms.openlocfilehash: 121cbc1c07ea8f6458df81d861aea3f8e1f91086
+ms.sourcegitcommit: c0dd436f6f8f44dc80dc43b07f6841a00b74b23f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-add-a-splash-screen-to-a-wpf-application"></a>Comment : ajouter un écran de démarrage dans une application WPF
 Cette rubrique montre comment ajouter une fenêtre de démarrage, ou *écran de démarrage*, à une application Windows Presentation Foundation (WPF).  
@@ -32,7 +32,7 @@ Cette rubrique montre comment ajouter une fenêtre de démarrage, ou *écran de 
   
 1.  Créez ou recherchez une image que vous souhaitez utiliser pour l’écran de démarrage. Vous pouvez utiliser n’importe quel format d’image pris en charge par le composant WIC (Windows Imaging). Par exemple, vous pouvez utiliser le format BMP, GIF, JPEG, PNG ou TIFF.  
   
-2.  Ajoutez le fichier image au projet d’Application WPF. Pour plus d’informations, consultez [NIB : Comment : ajouter des éléments existants à un projet](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
+2.  Ajoutez le fichier image au projet d’Application WPF. Pour plus d’informations, consultez [NIB : Comment : ajouter des éléments existants à un projet](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3).  
   
 3.  Dans l’Explorateur de solutions, sélectionnez l’image.  
   
@@ -61,4 +61,4 @@ Cette rubrique montre comment ajouter une fenêtre de démarrage, ou *écran de 
   
 ## <a name="see-also"></a>Voir aussi  
  <xref:System.Windows.SplashScreen>  
- [NIB : Comment : ajouter des éléments existants à un projet](http://msdn.microsoft.com/en-us/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)
+ [NIB : Comment : ajouter des éléments existants à un projet](http://msdn.microsoft.com/library/15f4cfb7-78ab-457f-9f14-099a25a6a2d3)
